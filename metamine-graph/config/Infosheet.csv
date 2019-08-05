@@ -1,0 +1,29 @@
+Attribute,Value
+Type,http://purl.org/dc/dcmitype/Dataset
+Title,Metamine Project Graph
+Alternative Title,Metamine
+Comment,"This is a knowledge graph created using the SDD approach for the Metamine Project Competency Question 1."
+Description,"Annotated Metamaterial data from Metamine project was used to craete a knowledge graph"
+Date Created,2019-08-05
+Creators,Neha Keshan
+Contributors,"Jim P. McCusker, Deborah L. McGuinness"
+Publisher,
+Date of Issue,2019-08-05
+Link,
+Identifier,metamine-1.0
+Keywords,"Metamaterial, Knowledge Graph, Metamine, Properties"
+License,MIT Licence
+Rights,Rights Reserved
+Language,English
+Version,1.0
+Version Of,
+Previous Version,
+Standards,
+Source,
+File Format,csv
+Documentation,
+Dictionary Mapping,
+Codebook,
+Code Mapping,
+Timeline,
+Imports,
