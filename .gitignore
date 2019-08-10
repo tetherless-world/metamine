@@ -91,3 +91,7 @@ ENV/
 # sdd2owl input directory
 #input/
 #output/
+
+
+#generated rdf file is above 100MB limit
+.trig
