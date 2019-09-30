@@ -1,0 +1,3 @@
+Column,Code,Class,Resource,Label,Comment,Definition
+material,1,sio:MaterialEntity,,Vero White, Material 1, the first material used to create the metamaterial
+material,2,sio:MaterialEntity,,Tango Black, Material 2, the second material used to create the metamaterial
