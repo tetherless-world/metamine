@@ -478,9 +478,9 @@ whyis:hasView "visualization.html".
 
 <http://nanomine.org/ns/PolymerNanocomposite> a <http://metamine.org/ns/Metamaterials>.
 
-<http://metamine.org/ns/Metamaterials> rdfs:subClassOf owl:Class.
+<http://metamine.org/ns/Metamaterial> rdfs:subClassOf owl:Class.
 
-<http://metamine.org/ns/Metamaterials> a owl:Class;
+<http://metamine.org/ns/Metamaterial> a owl:Class;
   whyis:hasConstraints "class_constraints.json";
   whyis:hasOutgoing "outgoing_class.json";
   whyis:hasIncoming "incoming_class.json";
