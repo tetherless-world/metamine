@@ -21,43 +21,43 @@
 :imports_table a csvw:Table, setl:Table;
   prov:wasGeneratedBy [
     a setl:Extract;
-    prov:used <https://docs.google.com/spreadsheets/d/1hDqbUzgJ2menVFhkjAvZs5uWgVoO-lxi7nxOh6W2QiA/export?exportFormat=csv&gid=425213399>;
+    prov:used <https://docs.google.com/spreadsheets/d/1rp4xsSKfb6Je1IprBD0eXXxQAruXjXbBXHMGsNeslL4/export?exportFormat=csv&gid=433332276>;
   ].
 
 :ontology_annotations_table a csvw:Table, setl:Table;
   prov:wasGeneratedBy [
     a setl:Extract;
-    prov:used <https://docs.google.com/spreadsheets/d/1hDqbUzgJ2menVFhkjAvZs5uWgVoO-lxi7nxOh6W2QiA/export?exportFormat=csv&gid=1315864145>;
+    prov:used <https://docs.google.com/spreadsheets/d/1rp4xsSKfb6Je1IprBD0eXXxQAruXjXbBXHMGsNeslL4/export?exportFormat=csv&gid=267154626>;
   ].
 
 :publication_classes_table a csvw:Table, setl:Table;
   prov:wasGeneratedBy [
     a setl:Extract;
-    prov:used <https://docs.google.com/spreadsheets/d/1hDqbUzgJ2menVFhkjAvZs5uWgVoO-lxi7nxOh6W2QiA/export?exportFormat=csv&gid=1070751701>;
+    prov:used <https://docs.google.com/spreadsheets/d/1rp4xsSKfb6Je1IprBD0eXXxQAruXjXbBXHMGsNeslL4/export?exportFormat=csv&gid=1999083927>;
   ].
 
 :property_classes_table a csvw:Table, setl:Table;
   prov:wasGeneratedBy [
     a setl:Extract;
-    prov:used <https://docs.google.com/spreadsheets/d/1hDqbUzgJ2menVFhkjAvZs5uWgVoO-lxi7nxOh6W2QiA/export?exportFormat=csv&gid=1806836834>;
+    prov:used <https://docs.google.com/spreadsheets/d/1rp4xsSKfb6Je1IprBD0eXXxQAruXjXbBXHMGsNeslL4/export?exportFormat=csv&gid=0>;
   ].
 
 :material_classes_table a csvw:Table, setl:Table;
   prov:wasGeneratedBy [
     a setl:Extract;
-    prov:used <https://docs.google.com/spreadsheets/d/1hDqbUzgJ2menVFhkjAvZs5uWgVoO-lxi7nxOh6W2QiA/export?exportFormat=csv&gid=1042381215>;
+    prov:used <https://docs.google.com/spreadsheets/d/1rp4xsSKfb6Je1IprBD0eXXxQAruXjXbBXHMGsNeslL4/export?exportFormat=csv&gid=1670911210>;
   ].
 
 :characterization_classes_table a csvw:Table, setl:Table;
   prov:wasGeneratedBy [
     a setl:Extract;
-    prov:used <https://docs.google.com/spreadsheets/d/1hDqbUzgJ2menVFhkjAvZs5uWgVoO-lxi7nxOh6W2QiA/export?exportFormat=csv&gid=798992913>;
+    prov:used <https://docs.google.com/spreadsheets/d/1rp4xsSKfb6Je1IprBD0eXXxQAruXjXbBXHMGsNeslL4/export?exportFormat=csv&gid=1611871865>;
   ].
 
 :geometry_classes_table a csvw:Table, setl:Table;
   prov:wasGeneratedBy [
     a setl:Extract;
-    prov:used <https://docs.google.com/spreadsheets/d/1hDqbUzgJ2menVFhkjAvZs5uWgVoO-lxi7nxOh6W2QiA/export?exportFormat=csv&gid=1119107488>;
+    prov:used <https://docs.google.com/spreadsheets/d/1rp4xsSKfb6Je1IprBD0eXXxQAruXjXbBXHMGsNeslL4/export?exportFormat=csv&gid=1958780329>;
   ].
 
 :ontology a setl:SemanticETLScript;
@@ -272,6 +272,42 @@
                 ]
 	    }
         ]
+}]'''],[
+    a setl:Transform, setl:JSLDT;
+    prov:used :geometry_classes_table;
+    setl:hasContext '''{
+  "@vocab" :  "http://materialsmine.org/",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "materialsmine" :    "http://materialsmine.org/ns/"
+}''';
+    prov:value '''[{
+	"@id": "http://materialsmine.org/ns",
+	"@graph": [{
+		"@id": "{{row.uri}}",
+                "@type" : "owl:Class",
+                "rdfs:label" : "{{row.label}}",
+                "skos:definition" : [ { "@if" : "not isempty(row.definition)", "@value": "{{row.definition}}" }],
+                "materialsmine:hasSelector" : [ { "@if" : "not isempty(row.xpath)", "@value": "{{row.xpath}}" }],
+                "rdfs:subClassOf" : [
+                    { "@if" : "not isempty(row.subClassOf)",
+                      "@for" : "superClass in row.subClassOf.split(', ')",
+                      "@do" : { "@id": "{{superClass}}" }
+                    },
+                    { "@if" : "not isempty(row.unit)",
+                      "@type" : "owl:Restriction",
+                      "owl:onProperty" : { "@id":"sio:hasUnit"},
+                      "owl:hasValue" : { "@id": "materialsmine:unit/{{slugify(row.unit)}}", "rdfs:label" : "{{row.unit}}", "@type" : "sio:UnitOfMeasurement" }
+                    }
+                ]
+	}]
 }]'''].
 
 
