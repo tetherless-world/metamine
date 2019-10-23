@@ -4,7 +4,7 @@ import os
 import logging
 from datetime import timedelta
 
-project_name = "metamine_visualization"
+project_name = "Materialsmine Knowledge Graph"
 import importer
 
 from whyis import autonomic
@@ -26,11 +26,11 @@ Config = dict(
     # use DEBUG mode?
     DEBUG = False,
 
-    site_name = "metamine-visualization",
+    site_name = "Materialsmine",
 
     site_header_image = 'static/images/random_network.png',
 
-    site_description = '',
+    site_description = 'Materialsmine Knowledge Graph consisting of Polymer Nanocomposites and Metamaterials',
     
     root_path = '/apps/whyis',
 
@@ -42,6 +42,8 @@ Config = dict(
 
     WTF_CSRF_ENABLED = True,
     SECRET_KEY = "8qs0uvlotSwrTRL8qQtLnXYhWcGBKynh",
+
+    DEFAULT_ANONYMOUS_READ = True,
 
     nanopub_archive = {
         'depot.storage_path' : "/data/nanopublications",

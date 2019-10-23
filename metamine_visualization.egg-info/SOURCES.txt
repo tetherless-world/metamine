@@ -1,3 +1,4 @@
+README.md
 setup.py
 metamine_visualization.egg-info/PKG-INFO
 metamine_visualization.egg-info/SOURCES.txt
