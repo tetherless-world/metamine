@@ -60,6 +60,12 @@
     prov:used <https://docs.google.com/spreadsheets/d/1rp4xsSKfb6Je1IprBD0eXXxQAruXjXbBXHMGsNeslL4/export?exportFormat=csv&gid=1958780329>;
   ].
 
+:effective_properties_table a csvw:Table, setl:Table;
+  prov:wasGeneratedBy [
+    a setl:Extract;
+    prov:used <https://docs.google.com/spreadsheets/d/1rp4xsSKfb6Je1IprBD0eXXxQAruXjXbBXHMGsNeslL4/export?exportFormat=csv&gid=478983934>;
+  ].
+
 :ontology a setl:SemanticETLScript;
   rdfs:label "materialsmine Ontology SETL Script".
 
@@ -305,6 +311,58 @@
                       "@type" : "owl:Restriction",
                       "owl:onProperty" : { "@id":"sio:hasUnit"},
                       "owl:hasValue" : { "@id": "materialsmine:unit/{{slugify(row.unit)}}", "rdfs:label" : "{{row.unit}}", "@type" : "sio:UnitOfMeasurement" }
+                    }
+                ]
+	}]
+}]'''],[
+    a setl:Transform, setl:JSLDT;
+    prov:used :effective_properties_table;
+    setl:hasContext '''{
+  "@vocab" :  "http://materialsmine.org/",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "materialsmine" :    "http://materialsmine.org/ns/"
+}''';
+    prov:value '''[{
+	"@id": "http://materialsmine.org/ns",
+	"@graph": [{
+		"@id": "{{row.uri}}",
+                "@type" : "owl:Class",
+                "rdfs:label" : "{{row.label}}",
+                "skos:definition" : [ { "@if" : "not isempty(row.definition)", "@value": "{{row.definition}}" }],
+                "materialsmine:hasSelector" : [ { "@if" : "not isempty(row.xpath)", "@value": "{{row.xpath}}" }],
+                "rdfs:subClassOf" : [
+                    { "@if" : "not isempty(row.subClassOf)",
+                      "@for" : "superClass in row.subClassOf.split(', ')",
+                      "@do" : { "@id": "{{superClass}}" }
+                    },
+                    { "@if" : "not isempty(row.unit)",
+                      "@type" : "owl:Restriction",
+                      "owl:onProperty" : { "@id":"sio:hasUnit"},
+                      "owl:hasValue" : { "@id": "materialsmine:unit/{{slugify(row.unit)}}", "rdfs:label" : "{{row.unit}}", "@type" : "sio:UnitOfMeasurement" }
+                    },
+                    { "@if" : "not isempty(row.wasDerivedFrom)",
+                      "@for" : "derived in row.wasDerivedFrom.split(', ')",
+                      "@do" : {
+                        "@type" : "owl:Restriction",
+                        "owl:onProperty" : { "@id":"sio:wasDerivedFrom"},
+                        "owl:someValuesFrom" : { "@id": "{{derived}}" }
+                      }
+                    },
+                    { "@if" : "not isempty(row.inRelationTo)",
+                      "@for" : "relation in row.inRelationTo.split(', ')",
+                      "@do" : {
+                        "@type" : "owl:Restriction",
+                        "owl:onProperty" : { "@id":"sio:inRelationTo"},
+                        "owl:someValuesFrom" : { "@id": "{{relation}}" }
+                      }
                     }
                 ]
 	}]

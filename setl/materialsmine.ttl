@@ -1,6 +1,6 @@
 @prefix : <http://materialsmine.org/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix materialsmine: <http://materialsmine.org/ns/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -10,7 +10,7 @@
 
 :ns a owl:Ontology ;
     rdfs:label "Materialsmine Ontology" ;
-    dc:creator <https://tw.rpi.edu/instances/Deborah_L_McGuinness>,
+    dcterms:creator <https://tw.rpi.edu/instances/Deborah_L_McGuinness>,
         <https://tw.rpi.edu/instances/JamesMcCusker>,
         <https://tw.rpi.edu/instances/NehaKeshan>,
         <https://tw.rpi.edu/instances/VipulaRawte> ;
@@ -61,10 +61,10 @@ materialsmine:AtomicForceMicroscopy a owl:Class ;
     materialsmine:hasSelector "//Atomic_Force_Microscopy" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty prov:generated ;
-            owl:someValuesFrom materialsmine:ViscoelasticProperty ],
+            owl:someValuesFrom materialsmine:MechanicalProperty ],
         [ a owl:Restriction ;
             owl:onProperty prov:generated ;
-            owl:someValuesFrom materialsmine:MechanicalProperty ],
+            owl:someValuesFrom materialsmine:ViscoelasticProperty ],
         sio:Measuring ;
     skos:definition "Nanoscale probing of material surface characteristics" .
 
@@ -266,13 +266,13 @@ materialsmine:DifferentialScanningCalorimetry a owl:Class ;
     materialsmine:hasSelector "//Differential_Scanning_Calorimetry" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty prov:used ;
-            owl:someValuesFrom materialsmine:CoolingRate ],
-        [ a owl:Restriction ;
-            owl:onProperty prov:used ;
             owl:someValuesFrom materialsmine:HeatingRate ],
         [ a owl:Restriction ;
             owl:onProperty prov:generated ;
             owl:someValuesFrom materialsmine:ThermalProperty ],
+        [ a owl:Restriction ;
+            owl:onProperty prov:used ;
+            owl:someValuesFrom materialsmine:CoolingRate ],
         sio:Measuring ;
     skos:definition "Measurement of heat required to increase unit temperature in a material" .
 
@@ -288,6 +288,18 @@ materialsmine:DynamicMechanicalAnalysis a owl:Class ;
 materialsmine:DynamicProperty a owl:Class ;
     rdfs:label "Dynamic Property" ;
     rdfs:subClassOf materialsmine:ViscoelasticProperty .
+
+materialsmine:EffectivePoissonsRatio a owl:Class ;
+    rdfs:label "Effective Poissons Ratio" ;
+    rdfs:subClassOf materialsmine:EffectiveMechanicalProperty ;
+    skos:definition "Negative ratio of traverse to axial strain" .
+
+materialsmine:EffectiveYoungsModulus a owl:Class ;
+    rdfs:label "Effective Youngs Modulus" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue <http://materialsmine.org/ns/unit/pa> ;
+            owl:onProperty sio:hasUnit ],
+        materialsmine:EffectiveMechanicalProperty .
 
 materialsmine:Elastomer a owl:Class ;
     rdfs:label "Elastomer" ;
@@ -706,8 +718,7 @@ materialsmine:PlateRheometery a owl:Class ;
 materialsmine:PoissonsRatio a owl:Class ;
     rdfs:label "Poissons Ratio" ;
     materialsmine:hasSelector "//PoissonsRatio" ;
-    rdfs:subClassOf materialsmine:MechanicalProperty,
-        materialsmine:TensileProperty ;
+    rdfs:subClassOf materialsmine:MechanicalProperty ;
     skos:definition "Negative ratio of traverse to axial strain" .
 
 materialsmine:Polydispersity a owl:Class ;
@@ -773,22 +784,22 @@ materialsmine:ScanningElectronMicroscopy a owl:Class ;
     materialsmine:hasSelector "//Scanning_Electron_Microscopy" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty prov:used ;
-            owl:someValuesFrom materialsmine:ExposureTime ],
-        [ a owl:Restriction ;
-            owl:onProperty prov:used ;
-            owl:someValuesFrom materialsmine:AcceleratingVoltage ],
-        [ a owl:Restriction ;
-            owl:onProperty prov:used ;
-            owl:someValuesFrom materialsmine:Magnification ],
-        [ a owl:Restriction ;
-            owl:onProperty prov:used ;
             owl:someValuesFrom materialsmine:WorkingDistance ],
         [ a owl:Restriction ;
             owl:onProperty prov:used ;
             owl:someValuesFrom materialsmine:EmissionCurrent ],
         [ a owl:Restriction ;
+            owl:onProperty prov:used ;
+            owl:someValuesFrom materialsmine:ExposureTime ],
+        [ a owl:Restriction ;
             owl:onProperty prov:generated ;
             owl:someValuesFrom materialsmine:ElectricalProperty ],
+        [ a owl:Restriction ;
+            owl:onProperty prov:used ;
+            owl:someValuesFrom materialsmine:Magnification ],
+        [ a owl:Restriction ;
+            owl:onProperty prov:used ;
+            owl:someValuesFrom materialsmine:AcceleratingVoltage ],
         sio:Measuring ;
     skos:definition "Scanning electron microscopy for obtaining microstructure at microscale" .
 
@@ -1046,23 +1057,23 @@ materialsmine:TransmissionElectronMicroscopy a owl:Class ;
     rdfs:label "Transmission Electron Microscopy" ;
     materialsmine:hasSelector "//Transmission_Electron_Microscopy" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty prov:used ;
-            owl:someValuesFrom materialsmine:ExposureTime ],
-        [ a owl:Restriction ;
-            owl:onProperty prov:used ;
-            owl:someValuesFrom materialsmine:EmissionCurrent ],
-        [ a owl:Restriction ;
-            owl:onProperty prov:used ;
-            owl:someValuesFrom materialsmine:WorkingDistance ],
+            owl:onProperty prov:generated ;
+            owl:someValuesFrom materialsmine:ElectricalProperty ],
         [ a owl:Restriction ;
             owl:onProperty prov:used ;
             owl:someValuesFrom materialsmine:AcceleratingVoltage ],
         [ a owl:Restriction ;
             owl:onProperty prov:used ;
+            owl:someValuesFrom materialsmine:ExposureTime ],
+        [ a owl:Restriction ;
+            owl:onProperty prov:used ;
+            owl:someValuesFrom materialsmine:WorkingDistance ],
+        [ a owl:Restriction ;
+            owl:onProperty prov:used ;
             owl:someValuesFrom materialsmine:Magnification ],
         [ a owl:Restriction ;
-            owl:onProperty prov:generated ;
-            owl:someValuesFrom materialsmine:ElectricalProperty ],
+            owl:onProperty prov:used ;
+            owl:someValuesFrom materialsmine:EmissionCurrent ],
         sio:Measuring ;
     skos:definition "Transmission electron microscopy for obtaining microstructure at nanoscale" .
 
@@ -1136,6 +1147,14 @@ materialsmine:YoungsModulus a owl:Class ;
             owl:onProperty sio:hasUnit ],
         materialsmine:MechanicalProperty .
 
+materialsmine:psvBandgap a owl:Class ;
+    rdfs:label "Effective psvBandgap" ;
+    rdfs:subClassOf materialsmine:EffectiveBandgap .
+
+materialsmine:shBandgap a owl:Class ;
+    rdfs:label "Effective shBandgap" ;
+    rdfs:subClassOf materialsmine:EffectiveBandgap .
+
 sio:Density a owl:Class ;
     rdfs:label "Density" .
 
@@ -1143,6 +1162,10 @@ materialsmine:Additive a owl:Class ;
     rdfs:label "Additive" ;
     rdfs:subClassOf sio:ChemicalSubstance ;
     skos:definition "A chemical substance that is blended in to a polymer to acheive a desired effect." .
+
+materialsmine:Bandgap a owl:Class ;
+    rdfs:label "Bandgap" ;
+    rdfs:subClassOf sio:Quantity .
 
 materialsmine:CapillarySize a owl:Class ;
     rdfs:label "Capillar Size" ;
@@ -1158,9 +1181,6 @@ materialsmine:Filler a owl:Class ;
     rdfs:label "Filler" ;
     rdfs:subClassOf <file:///>,
         sio:Role .
-
-materialsmine:Geometry a owl:Class ;
-    rdfs:label "Geometry" .
 
 materialsmine:HeatingRate a owl:Class ;
     rdfs:label "Heating Rate" ;
@@ -1233,6 +1253,26 @@ materialsmine:Condition a owl:Class ;
     rdfs:label "Condition" ;
     rdfs:subClassOf materialsmine:CompressionProperty .
 
+materialsmine:EffectiveBandgap a owl:Class ;
+    rdfs:label "Effective Bandgap" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty sio:inRelationTo ;
+            owl:someValuesFrom materialsmine:Bandgap ],
+        [ a owl:Restriction ;
+            owl:onProperty sio:wasDerivedFrom ;
+            owl:someValuesFrom materialsmine:Geometry ],
+        sio:Quantity .
+
+materialsmine:EffectiveMechanicalProperty a owl:Class ;
+    rdfs:label "Effective Mechanical Property" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty sio:inRelationTo ;
+            owl:someValuesFrom materialsmine:MechanicalProperty ],
+        [ a owl:Restriction ;
+            owl:onProperty sio:wasDerivedFrom ;
+            owl:someValuesFrom materialsmine:Geometry ],
+        sio:Quantity .
+
 materialsmine:EmissionCurrent a owl:Class ;
     rdfs:label "Emission Current" ;
     materialsmine:hasSelector "//EmissionCurrent" ;
@@ -1280,6 +1320,9 @@ materialsmine:FlexuralCreep a owl:Class ;
     rdfs:subClassOf materialsmine:Creep ;
     skos:definition "creep during flexural or bending test" .
 
+materialsmine:Geometry a owl:Class ;
+    rdfs:label "Geometry" .
+
 materialsmine:HardnessProperty a owl:Class ;
     rdfs:label "Hardness Property" ;
     rdfs:subClassOf sio:Quantity .
@@ -1294,11 +1337,11 @@ materialsmine:Rheometery a owl:Class ;
     rdfs:label "Rheometry" ;
     materialsmine:hasSelector "//Rheometery" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty prov:used ;
-            owl:someValuesFrom materialsmine:CapillarySize ],
-        [ a owl:Restriction ;
             owl:onProperty prov:generated ;
             owl:someValuesFrom materialsmine:ViscoelasticProperty ],
+        [ a owl:Restriction ;
+            owl:onProperty prov:used ;
+            owl:someValuesFrom materialsmine:CapillarySize ],
         sio:Measuring ;
     skos:definition "Measurement of the quantitative and qualitative relationships between deformations and stresses and their derivatives" .
 
@@ -1370,23 +1413,23 @@ materialsmine:TensileProperty a owl:Class ;
     rdfs:subClassOf materialsmine:MechanicalProperty ;
     skos:definition "Properties of how the material will react to forces being applied in tension." .
 
-materialsmine:MechanicalProperty a owl:Class ;
-    rdfs:label "Mechanical Property" ;
-    rdfs:subClassOf sio:Quantity .
-
 materialsmine:ViscoelasticProperty a owl:Class ;
     rdfs:label "Viscoelastic Property" ;
     rdfs:subClassOf sio:Quantity ;
     skos:definition "Properties of materials that exhibit both viscous and elastic behaviors" .
 
+materialsmine:MechanicalProperty a owl:Class ;
+    rdfs:label "Mechanical Property" ;
+    rdfs:subClassOf sio:Quantity .
+
 materialsmine:ThermalProperty a owl:Class ;
     rdfs:label "Thermal Property" ;
     rdfs:subClassOf sio:Quantity .
 
-<http://materialsmine.org/ns/unit/pa> a sio:UnitOfMeasurement ;
-    rdfs:label "Pa" .
-
 materialsmine:ElectricalProperty a owl:Class ;
     rdfs:label "Electrical Property" ;
     rdfs:subClassOf sio:Quantity .
+
+<http://materialsmine.org/ns/unit/pa> a sio:UnitOfMeasurement ;
+    rdfs:label "Pa" .
 
