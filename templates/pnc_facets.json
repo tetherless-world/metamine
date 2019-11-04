@@ -13,12 +13,24 @@
         "propertyType": "http://www.w3.org/2002/07/owl#ObjectProperty"
     },
     {
+        "class": "http://materialsmine.org/ns/PolymerNanocomposite",
+        "label": "Property",
+        "facetId" : "Property",
+        "predicate": "<http://semanticscience.org/resource/hasAttribute>",
+        "typeProperty" : "rdf:type",
+        "valuePredicate" : "<http://semanticscience.org/resource/hasValue>",
+        "unitPredicate" : "<http://semanticscience.org/resource/hasUnit>",
+        "propertyType": "http://www.w3.org/2002/07/owl#ObjectProperty"
+    },
+    {
         "class": "http://materialsmine.org/ns/Metamaterial",
         "inverse": "http://semanticscience.org/resource/wasDerivedFrom",
         "label": "EffectiveProperties",
         "facetId" : "EffectiveProperties",
         "multiType": "union",
         "typeProperty" : "rdf:type",
+        "valuePredicate" : "<http://semanticscience.org/resource/hasValue>",
+        "unitPredicate" : "<http://semanticscience.org/resource/hasUnit>",
         "propertyType": "http://www.w3.org/2002/07/owl#ObjectProperty"
     }
        
