@@ -476,9 +476,11 @@ rdfs:label flaskld:fieldName "name" .
 <http://materialsmine.tw.rpi.edu/ns/Visualization> a owl:Class;
 whyis:hasView "visualization.html".
 
-<http://materialsmine.org/ns/Metamaterial> rdfs:subClassOf owl:Class.
+<http://materialsmine.org/ns/Metamaterial> a <http://materialsmine.org/ns/MMClass>.
 
-<http://materialsmine.org/ns/Metamaterial> a owl:Class;
+<http://materialsmine.org/ns/MMClass> rdfs:subClassOf owl:Class.
+
+<http://materialsmine.org/ns/MMClass> a owl:Class;
   whyis:hasConstraints "class_constraints.json";
   whyis:hasOutgoing "outgoing_class.json";
   whyis:hasIncoming "incoming_class.json";
