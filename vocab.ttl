@@ -486,4 +486,4 @@ whyis:hasView "visualization.html".
   whyis:hasIncoming "incoming_class.json";
   whyis:newInstanceView "new_instance_view.html";
   whyis:hasView "class_view.html";
-  whyis:hasFacets "pnc_facets.json".
+  whyis:hasFacets "mm_facets.json".
