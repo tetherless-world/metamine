@@ -1,0 +1,93 @@
+prefix prov: <http://www.w3.org/ns/prov#> 
+prefix obo: <http://purl.obolibrary.org/obo/> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix materialsmine: <http://materialsmine.org/ns/> 
+prefix stato: <http://purl.obolibrary.org/obo/STATO_> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix sio: <http://semanticscience.org/resource/> 
+prefix uo: <http://purl.obolibrary.org/obo/UO_> 
+prefix chear: <http://hadatac.org/ont/chear#> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix np: <http://www.nanopub.org/nschema#> 
+prefix materialsmine-kb: <http://materialsmine.org/kb/materialsmine#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix hasco: <http://hadatac.org/ont/hasco#> 
+
+SELECT DISTINCT ?id ?materials ?material_poisson_ratio_values ?material_youngs_modulus_values ?authors ?geometry_type ?geometry_label ?geometry_data_type ?geometry_data ?materials_label ?effective_poisson_ratio ?effective_youngs_modulus WHERE {
+  ?id_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Identifier  ;
+    <http://semanticscience.org/resource/isAttributeOf>    ?metamaterial_V  ;
+    <http://semanticscience.org/resource/hasValue> ?id .
+
+  ?materials_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:MaterialEntity  ;
+    sio:isPartOf ?material_V  ;
+    <http://semanticscience.org/resource/hasValue> ?materials .
+
+  ?material_poisson_ratio_values_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> materialsmine:PoissonRatio  ;
+    <http://semanticscience.org/resource/isAttributeOf>    materials  ;
+    sio:isPartOf ?properties_V  ;
+    <http://semanticscience.org/resource/hasValue> ?material_poisson_ratio_values .
+
+  ?material_youngs_modulus_values_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> materialsmine:YoungsModulus  ;
+    <http://semanticscience.org/resource/isAttributeOf>    materials  ;
+    <http://semanticscience.org/resource/hasUnit>    uo:0000110 ;
+    <http://semanticscience.org/resource/hasValue> ?material_youngs_modulus_values .
+
+  ?authors_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Name  ;
+    <http://semanticscience.org/resource/isAttributeOf>    ?author_V  ;
+    <http://semanticscience.org/resource/hasValue> ?authors .
+
+  ?geometry_type_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Attribute  ;
+    <http://semanticscience.org/resource/isAttributeOf>    ?geometry_V  ;
+    <http://semanticscience.org/resource/hasValue> ?geometry_type .
+
+  ?geometry_label_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Attribute  ;
+    <http://semanticscience.org/resource/isAttributeOf>    ?geometry_V  ;
+    <http://semanticscience.org/resource/hasValue> ?geometry_label .
+
+  ?geometry_data_type_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Attribute  ;
+    <http://semanticscience.org/resource/isAttributeOf>    ?geometry_V  ;
+    <http://semanticscience.org/resource/hasValue> ?geometry_data_type .
+
+  ?geometry_data_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Attribute  ;
+    <http://semanticscience.org/resource/isAttributeOf>    ?geometry_V  ;
+    <http://semanticscience.org/resource/hasValue> ?geometry_data .
+
+  ?materials_label_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ??material  ;
+    <http://semanticscience.org/resource/hasValue> ?materials_label .
+
+  ?effective_poisson_ratio_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> materialsmine:EffectivePoissonRatio  ;
+    <http://semanticscience.org/resource/isAttributeOf>    ?metamaterial_V  ;
+    sio:isPartOf ?effectiveProperties_V  ;
+    <http://semanticscience.org/resource/hasValue> ?effective_poisson_ratio .
+
+  ?effective_youngs_modulus_E <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> materialsmine:EffectiveYoungsModulus  ;
+    <http://semanticscience.org/resource/isAttributeOf>    ?metamaterial_V  ;
+    <http://semanticscience.org/resource/hasUnit>    uo:0000110 ;
+    sio:isPartOf ?effectiveProperties_V  ;
+    <http://semanticscience.org/resource/hasValue> ?effective_youngs_modulus .
+
+
+  ?author_V <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Human  ;
+    <http://semanticscience.org/resource/hasRole>    [ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:AuthorRole ].
+
+  ?material_design_V <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Design  ;
+    <http://semanticscience.org/resource/inRelationTo>    ?material_V .
+
+  ?material_V <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:MaterialEntity .
+
+  ?properties_V <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Attribute  ;
+    <http://semanticscience.org/resource/isAttributeOf>    materials  ;
+    <http://semanticscience.org/resource/hasRole>    [ <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> materialsmine:Properties ].
+
+  ?effectiveProperties_V <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> sio:Attribute  ;
+    <http://semanticscience.org/resource/isAttributeOf>    ?metamaterial_V  ;
+    sio:inRelationTo materialsmine:Properties  ;
+    <http://www.w3.org/ns/prov#wasDerivedFrom>    materialsmine:Geometry .
+
+  ?metamaterial_V <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> materialsmine:Metamaterial  ;
+    sio:isPartOf ?material_V .
+
+  ?geometry_V <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> materialsmine:Geometry  ;
+    sio:describes ?metamaterial_V .
+
+}

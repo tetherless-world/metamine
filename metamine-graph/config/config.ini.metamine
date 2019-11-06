@@ -2,7 +2,7 @@
 # Specify a file with the prefixes for existing ontologies used in your translation
 prefixes = metamine-graph/config/prefixes.csv
 # Specify the base uri to be associated with all triples minted by the script
-base_uri = metamine-kb
+base_uri = materialsmine-kb
 
 [Source Files]
 dictionary = metamine-graph/input/DM/metamineDM.csv
@@ -11,9 +11,9 @@ timeline = metamine-graph/input/TL/metamineTL.csv
 data_file = metamine-graph/input/Data/metamineData.csv
 code_mappings = metamine-graph/config/code_mappings.csv
 infosheet = metamine-graph/config/Infosheet.csv
-properties = metamine-graph/config/Properties.csv
+#properties = metamine-graph/config/Properties.csv
 
 [Output Files]
-out_file = metamine-graph/output/trig/metamine-kg.trig
-query_file = metamine-graph/output/sparql/metamineQuery
-swrl_file = metamine-graph/output/swrl/metamineSWRL
+out_file = metamine-graph/output/trig/materialsmine-kg.trig
+query_file = metamine-graph/output/sparql/materialsmineQuery
+swrl_file = metamine-graph/output/swrl/materialsmineSWRL
