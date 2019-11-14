@@ -369,13 +369,6 @@
 }]'''].
 
 
-#<materialsmine.trig> a pv:File;
-#    dcterms:format "application/trig";
-#    prov:wasGeneratedBy [
-#      a setl:Load;
-#      prov:used <http://materialsmine.org/ns> ;
-#    ].
-
 <materialsmine.ttl> a pv:File;
     dcterms:format "text/turtle";
     prov:wasGeneratedBy [
