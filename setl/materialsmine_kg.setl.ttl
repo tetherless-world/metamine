@@ -21,7 +21,7 @@
 :imports_static_data a csvw:Table, setl:Table;
   prov:wasGeneratedBy [
     a setl:Extract;
-    prov:used <https://docs.google.com/spreadsheets/d/1XG87nahuO_JWjvnmcwAUSO7KH2e2RIBu7rO4o4i1LIo/export?exportFormat=csv&gid=0>;
+    prov:used <https://docs.google.com/spreadsheets/d/1XG87nahuO_JWjvnmcwAUSO7KH2e2RIBu7rO4o4i1LIo/export?exportFormat=csv&gid=499090554>;
   ].
 
 
@@ -44,53 +44,55 @@
   "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
   "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
   "bibo" :    "http://purl.org/ontology/bibo/",
-  "materialsmine" :    "http://materialsmine.org/ns/"
+  "materialsmine" :    "http://materialsmine.org/"
 }''';
     prov:value '''[{
 	"@graph": [{
-		"@id": "http://materialsmine.org/ns/{{row.id}}",
+		"@id": "materialsmine:nanopub/{{row.id}}",
 		"@type": "nanopub:Nanopublication",
 		"nanopub:hasAssertion": {
-			"@id": "http://materialsmine.org/ns/{{row.id}}_assertion",
+			"@id": "materialsmine:{{row.id}}_assertion",
 			"@type": "nanopub:Assertion",
 			"@graph": {
-				"@id": "http://materialsmine.org/ns/{{row.id}}",
+				"@id": "materialsmine:{{row.id}}",
 				"@type": "materialsmine:Metamaterial",
 				"@sio:hasAttribute": [{
-						"@id": "EffectivePoissonsRatio",
-						"@type": "materialsmine:EffectiveProperty",
+						"@id": "materialsmine:{{row.id}}/effective_poissons_ratio",
+						"@type": "materialsmine:EffectivePoissonsRatio",
 						"sio:hasValue": {
 							"@value": "{{row.effective_poissons_ratio}}",
 							"@type": "xsd:double"
-						}
+						},
+						"sio:inRelationTo" : { "@id":"materialsmine:{{row.id}}/poissons_ratio"}
 					},
 					{
-						"@id": "EffectiveYoungsmodulus",
-						"@type": "materialsmine:EffectiveProperty",
+						"@id": "materialsmine:{{row.id}}/effective_youngs_modulus",
+						"@type": "materialsmine:EffectiveYoungsModulus",
 						"sio:hasValue": {
 							"@value": "{{row.effective_youngs_modulus}}",
 							"@type": "xsd:double"
 						},
 						"sio:hasUnit": {
 							"rdfs:label": "{{row.effective_youngs_modulus_unit}}"
-						}
+						},
+						"sio:inRelationTo" : { "@id":"materialsmine:{{row.id}}/youngs_modulus"}
 					}
 				],
 				"sio:hasPart": [{
-						"@type": "{{row.constituent_material_1}}",
+						"@type": "materialsmine:{{row.id}}/{{row.constituent_material_1}}",
 						"sio:hasAttribute": [{
-								"@type": "materialsmine:property",
-								"@id": "PoissonsRatio",
+								"@type": "materialsmine:PoissonsRatio",
+								"@id": "materialsmine:{{row.id}}/poissons_ratio",
 								"sio:hasValue": {
 									"@value": "{{row.constituent_material_1_poissons_ratio}}",
 									"@type": "xsd:double"
 								}
 							},
 							{
-								"@type": "materialsmine:property",
-								"@id": "YoungsModulus",
+								"@type": "materialsmine:YoungsModulus",
+								"@id": "materialsmine:{{row.id}}/youngs_modulus",
 								"sio:hasValue": {
-									"@value": "{{row.constituent_material_2_youngs_modulus}}",
+									"@value": "{{row.constituent_material_1_youngs_modulus_value}}",
 									"@type": "xsd:double"
 								},
 								"sio:hasUnit": {
@@ -100,24 +102,24 @@
 						]
 					},
 					{
-						"@type": "{{row.constituent_material_2}}",
+						"@type": "materialsmine:{{row.id}}/{{row.constituent_material_2}}",
 						"sio:hasAttribute": [{
-								"@type": "materialsmine:property",
-								"@id": "PoissonsRatio",
+								"@id": "materialsmine:{{row.id}}/poissons_ratio",
+								"@type": "materialsmine:PoissonsRatio",
 								"sio:hasValue": {
 									"@value": "{{row.constituent_material_2_poissons_ratio}}",
 									"@type": "xsd:double"
 								}
 							},
 							{
-								"@type": "materialsmine:property",
-								"@id": "YoungsModulus",
+								"@id": "materialsmine:{{row.id}}/youngs_modulus",
+								"@type": "materialsmine:YoungsModulus",
 								"sio:hasValue": {
-									"@value": "{{row.constituent_material_2_youngs_modulus}}",
+									"@value": "{{row.constituent_material_2_youngs_modulus_value}}",
 									"@type": "xsd:double"
 								},
 								"sio:hasUnit": {
-									"rdfs:label": "{{row.constituent_material_2_youngs_modulus_label}}"
+									"rdfs:label": "{{row.constituent_material_2_youngs_modulus_unit}}"
 								}
 							}
 						]
