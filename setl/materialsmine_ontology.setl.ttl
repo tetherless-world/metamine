@@ -14,6 +14,8 @@
 @prefix csvw:          <http://www.w3.org/ns/csvw#> .
 @prefix pv:            <http://purl.org/net/provenance/ns#>.
 @prefix bibo:          <http://purl.org/ontology/bibo/>.
+@prefix uo:            <http://purl.obolibrary.org/obo/UO_>.
+@prefix obo:           <http://purl.obolibrary.org/obo/>.
 
 @prefix :              <http://materialsmine.org/setl/> .
 
@@ -328,6 +330,8 @@
   "owl": "http://www.w3.org/2002/07/owl#",
   "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
   "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "uo" : "http://purl.obolibrary.org/obo/UO_",
+  "obo" : "http://purl.obolibrary.org/obo/",
   "materialsmine" :    "http://materialsmine.org/ns/"
 }''';
     prov:value '''[{

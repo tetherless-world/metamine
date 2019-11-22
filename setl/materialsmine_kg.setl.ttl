@@ -14,6 +14,8 @@
 @prefix csvw:          <http://www.w3.org/ns/csvw#> .
 @prefix pv:            <http://purl.org/net/provenance/ns#>.
 @prefix bibo:          <http://purl.org/ontology/bibo/>.
+@prefix uo:            <http://purl.obolibrary.org/obo/UO_>.
+@prefix obo:           <http://purl.obolibrary.org/obo/>.
 
 @prefix :              <http://materialsmine.org/setl/> .
 
@@ -44,6 +46,8 @@
   "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
   "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
   "bibo" :    "http://purl.org/ontology/bibo/",
+  "uo" :    "http://purl.obolibrary.org/obo/UO_",
+  "obo" :    "http://purl.obolibrary.org/obo/",
   "materialsmine" :    "http://materialsmine.org/"
 }''';
     prov:value '''[{
@@ -56,14 +60,14 @@
 			"@graph": {
 				"@id": "materialsmine:{{row.id}}",
 				"@type": "materialsmine:Metamaterial",
-				"@sio:hasAttribute": [{
+				"sio:hasAttribute": [{
 						"@id": "materialsmine:{{row.id}}/effective_poissons_ratio",
 						"@type": "materialsmine:EffectivePoissonsRatio",
 						"sio:hasValue": {
 							"@value": "{{row.effective_poissons_ratio}}",
 							"@type": "xsd:double"
 						},
-						"sio:inRelationTo" : { "@id":"materialsmine:{{row.id}}/poissons_ratio"}
+						"sio:inRelationTo" : [{ "@id":"materialsmine:{{row.id}}/{{row.constituent_material_1}}/poissons_ratio"},{ "@id":"materialsmine:{{row.id}}/{{row.constituent_material_2}}/poissons_ratio"}]
 					},
 					{
 						"@id": "materialsmine:{{row.id}}/effective_youngs_modulus",
@@ -73,60 +77,83 @@
 							"@type": "xsd:double"
 						},
 						"sio:hasUnit": {
-							"rdfs:label": "{{row.effective_youngs_modulus_unit}}"
+							"@value": "uo:{{row.effective_youngs_modulus_unit}}"
 						},
-						"sio:inRelationTo" : { "@id":"materialsmine:{{row.id}}/youngs_modulus"}
+						"sio:inRelationTo" : [{ "@id":"materialsmine:{{row.id}}/{{row.constituent_material_1}}/youngs_modulus"},{ "@id":"materialsmine:{{row.id}}/{{row.constituent_material_2}}/youngs_modulus"}]
 					}
 				],
 				"sio:hasPart": [{
-						"@type": "materialsmine:{{row.id}}/{{row.constituent_material_1}}",
+						"@id": "materialsmine:{{row.id}}/{{row.constituent_material_1}}",
+						"@type": "{{row.id}}/{{row.constituent_material_1}}",
 						"sio:hasAttribute": [{
 								"@type": "materialsmine:PoissonsRatio",
-								"@id": "materialsmine:{{row.id}}/poissons_ratio",
+								"@id": "materialsmine:{{row.id}}/{{row.constituent_material_1}}/poissons_ratio",
 								"sio:hasValue": {
-									"@value": "{{row.constituent_material_1_poissons_ratio}}",
+									"@value": "{{row.constituent_material_1}}/{{row.constituent_material_1_poissons_ratio}}",
 									"@type": "xsd:double"
 								}
 							},
 							{
 								"@type": "materialsmine:YoungsModulus",
-								"@id": "materialsmine:{{row.id}}/youngs_modulus",
+								"@id": "materialsmine:{{row.id}}/{{row.constituent_material_1}}/youngs_modulus",
 								"sio:hasValue": {
-									"@value": "{{row.constituent_material_1_youngs_modulus_value}}",
+									"@value": "{{row.constituent_material_1}}/{{row.constituent_material_1_youngs_modulus_value}}",
 									"@type": "xsd:double"
 								},
 								"sio:hasUnit": {
-									"rdfs:label": "{{row.constituent_material_1_youngs_modulus_unit}}"
+									"@value": "uo:{{row.constituent_material_1_youngs_modulus_unit}}"
 								}
 							}
 						]
 					},
 					{
-						"@type": "materialsmine:{{row.id}}/{{row.constituent_material_2}}",
+						"@id": "materialsmine:{{row.id}}/{{row.constituent_material_2}}",
+						"@type": "{{row.id}}/{{row.constituent_material_2}}",
 						"sio:hasAttribute": [{
-								"@id": "materialsmine:{{row.id}}/poissons_ratio",
+								"@id": "materialsmine:{{row.id}}/{{row.constituent_material_2}}/poissons_ratio",
 								"@type": "materialsmine:PoissonsRatio",
 								"sio:hasValue": {
-									"@value": "{{row.constituent_material_2_poissons_ratio}}",
+									"@value": "{{row.constituent_material_2}}/{{row.constituent_material_2_poissons_ratio}}",
 									"@type": "xsd:double"
 								}
 							},
 							{
-								"@id": "materialsmine:{{row.id}}/youngs_modulus",
+								"@id": "materialsmine:{{row.id}}/{{row.constituent_material_2}}/youngs_modulus",
 								"@type": "materialsmine:YoungsModulus",
 								"sio:hasValue": {
-									"@value": "{{row.constituent_material_2_youngs_modulus_value}}",
+									"@value": "{{row.constituent_material_2}}/{{row.constituent_material_2_youngs_modulus_value}}",
 									"@type": "xsd:double"
 								},
 								"sio:hasUnit": {
-									"rdfs:label": "{{row.constituent_material_2_youngs_modulus_unit}}"
+									"@value": "uo:{{row.constituent_material_2_youngs_modulus_unit}}"
 								}
 							}
 						]
 					}
-				]
+				],
+				"sio:isDescribedBy": {
+					"@id": "materialsmine:{{row.id}}/{{row.geometry_type}}",
+					"@type": "materialsmine:{{row.geometry_type}}",
+					"rdfs:label": "{{row.id}}/{{row.geometry_label}}",
+					"sio:hasValue": {
+						"@value": "{{row.geometry_data}}",
+						"@type": "{{row.geometry_data_type}}"
+					} 
+
+				}
 			}
 
+		},
+		"nanopub:hasProvenance":{
+			"@id": "materialsmine:{{row.id}}_provenance",
+			"@type": "nanopub:Provenance",
+			"@graph": [{
+				"@id": "materialsmine:{{row.id}}_assertion",
+				"dcterms:creator": {
+					"@id": "materialsmine:{{row.id}}/{{row.authors}}",
+					"@type": "prov:Organization"
+				}
+			}]
 		}
 
 
@@ -134,11 +161,10 @@
 
 }]'''].
 
-		
 
 
-<materialsmine_kg.ttl> a pv:File;
-    dcterms:format "text/turtle";
+<materialsmine_kg.trig> a pv:File;
+    dcterms:format "application/trig";
     prov:wasGeneratedBy [
       a setl:Load;
       prov:used :materialsmine_Knowledge_graph ;
