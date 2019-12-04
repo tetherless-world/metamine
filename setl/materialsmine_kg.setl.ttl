@@ -23,7 +23,7 @@
 :imports_static_data a csvw:Table, setl:Table;
   prov:wasGeneratedBy [
     a setl:Extract;
-    prov:used <https://docs.google.com/spreadsheets/d/1XG87nahuO_JWjvnmcwAUSO7KH2e2RIBu7rO4o4i1LIo/export?exportFormat=csv&gid=499090554>;
+    prov:used <https://docs.google.com/spreadsheets/d/1XG87nahuO_JWjvnmcwAUSO7KH2e2RIBu7rO4o4i1LIo/export?exportFormat=csv&gid=0>;
   ].
 
 
@@ -77,7 +77,7 @@
 							"@type": "xsd:double"
 						},
 						"sio:hasUnit": {
-							"@value": "uo:{{row.effective_youngs_modulus_unit}}"
+							"@id": "http://purl.obolibrary.org/obo/UO_0000110"
 						},
 						"sio:inRelationTo" : [{ "@id":"materialsmine:{{row.id}}/{{row.constituent_material_1}}/youngs_modulus"},{ "@id":"materialsmine:{{row.id}}/{{row.constituent_material_2}}/youngs_modulus"}]
 					}
@@ -101,7 +101,7 @@
 									"@type": "xsd:double"
 								},
 								"sio:hasUnit": {
-									"@value": "uo:{{row.constituent_material_1_youngs_modulus_unit}}"
+									"@id": "http://purl.obolibrary.org/obo/UO_0000110"
 								}
 							}
 						]
@@ -125,7 +125,7 @@
 									"@type": "xsd:double"
 								},
 								"sio:hasUnit": {
-									"@value": "uo:{{row.constituent_material_2_youngs_modulus_unit}}"
+									"@id": "http://purl.obolibrary.org/obo/UO_0000110"
 								}
 							}
 						]
@@ -163,7 +163,7 @@
 
 
 
-<materialsmine_kg.trig> a pv:File;
+<materialsmine_kg2.trig> a pv:File;
     dcterms:format "application/trig";
     prov:wasGeneratedBy [
       a setl:Load;

@@ -216,6 +216,7 @@
                 "skos:altLabel" : [ { "@if" : "not isempty(row.altLabel)", "@value": "{{row.altLabel}}" }],
                 "skos:definition" : [ { "@if" : "not isempty(row.definition)", "@value": "{{row.definition}}" }],
                 "prov:wasQuotedFrom" : [ { "@if" : "not isempty(row.wasQuotedFrom)", "@value": "{{row.wasQuotedFrom}}" }],
+                "sio:isDescribedBy" : [{"@if" : "not isempty(row.isDescribedBy)", "@value": "{{row.isDescribedBy}}"}],
                 "rdfs:subClassOf" : [
                     { "@if" : "not isempty(row.subClassOf)",
                       "@for" : "superClass in row.subClassOf.split(', ')",
@@ -373,8 +374,8 @@
 }]'''].
 
 
-<materialsmine.ttl> a pv:File;
-    dcterms:format "text/turtle";
+<materialsmine_ontology.trig> a pv:File;
+    dcterms:format "application/trig";
     prov:wasGeneratedBy [
       a setl:Load;
       prov:used :materialsmine_ontology ;
