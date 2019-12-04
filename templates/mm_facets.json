@@ -1,25 +1,6 @@
 [
     {
-        "class": "http://materialsmine.org/ns/materialsmine",
-        "label": "Geometry",
-        "facetId" : "Geometry",
-        "multiType": "union",
-        "predicate": "<http://semanticscience.org/resource/hasDescription>",
-        "typeProperty" : "rdf:type",
-        "propertyType": "http://www.w3.org/2002/07/owl#ObjectProperty"
-    },
-    {
-        "class": "http://materialsmine.org/ns/materialsmine",
-        "label": "Property",
-        "facetId" : "Property",
-        "predicate": "<http://semanticscience.org/resource/hasAttribute>",
-        "typeProperty" : "rdf:type",
-        "valuePredicate" : "<http://semanticscience.org/resource/hasValue>",
-        "unitPredicate" : "<http://semanticscience.org/resource/hasUnit>",
-        "propertyType": "http://www.w3.org/2002/07/owl#ObjectProperty"
-    },
-    {
-        "class": "http://materialsmine.org/ns/materialsmine",
+        "class": "http://materialsmine.org/Metamaterial",
         "inverse": "http://semanticscience.org/resource/wasDerivedFrom",
         "label": "EffectiveProperties",
         "facetId" : "EffectiveProperties",
@@ -28,7 +9,7 @@
         "specifier" : "?subGeometry a owl:Class . ?subGeometry rdfs:subClassOf* <http://materialsmine.org/ns/EffectiveMechanicalProperty> . ?subGeometry rdfs:label ?subLabel .",
         "valuePredicate" : "<http://semanticscience.org/resource/hasValue>",
         "unitPredicate" : "<http://semanticscience.org/resource/hasUnit>",
-        "propertyType": "http://www.w3.org/2002/07/owl#ObjectProperty"
+        "propertyType": "http://www.w3.org/2002/07/owl#ObjectProperty",
+        "predicate": "<http://semanticscience.org/resource/hasAttribute>"
     }
-       
 ]

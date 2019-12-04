@@ -1,4 +1,182 @@
+499090554
+
+
+,
+    {
+        "class": "http://materialsmine.org/ns/materialsmine",
+        "inverse": "http://semanticscience.org/resource/wasDerivedFrom",
+        "label": "EffectiveProperties",
+        "facetId" : "EffectiveProperties",
+        "multiType": "union",
+        "typeProperty" : "rdf:type",
+        "specifier" : "?subGeometry a owl:Class . ?subGeometry rdfs:subClassOf* <http://materialsmine.org/ns/EffectiveMechanicalProperty> . ?subGeometry rdfs:label ?subLabel .",
+        "valuePredicate" : "<http://semanticscience.org/resource/hasValue>",
+        "unitPredicate" : "<http://semanticscience.org/resource/hasUnit>",
+        "propertyType": "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+
+
+<http://materialsmine.org/i_s_00000002/tango_black/youngs_modulus> a materialsmine:YoungsModulus ;
+        sio:hasUnit materialsmine:Pascal;
+        sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+
+,
+				"sio:isDescribedBy": [{
+					"@id": "materialsmine:{{row.id}}/geometry",
+					"@type": "materialsmine:Geometry",
+					"sio:hasValue": {
+									"@value": "{{row.geometry_data}}"
+								},
+					"sio:hasAttribute":[{
+						"@id": "materialsmine:{{row.id}}/geometry_data_type",
+						"sio:hasValue": {
+									"@value": "{{row.geometry_data_type}}"
+								}
+					},
+					{
+						"@id": "materialsmine:{{row.id}}/geometry_data_label",
+						"sio:hasValue": {
+									"@value": "{{row.geometry_label}}"
+								}
+
+					},
+					{
+						"@id": "materialsmine:{{row.id}}/geometry_type",
+						"sio:hasValue": {
+									"@value": "{{row.geometry_type}}"
+								}
+					}]
+				}]
+
+                
+
+
+it should look like:
+materialsmine:i_s_00000001 a materialsmine:Metamaterial,
+        <nanopub:Nanopublication> ;
+    //important line edited by jim:
+    ns1:sio:hasAttribute [ a materialsmine:EffectivePoissonsRatio; sio:hasValue 12; sio:hasUnit UO:whatever],
+        materialsmine:EffectiveYoungsmodulus ;
+    sio:hasPart [ a materialsmine:vero_white ;
+            sio:hasAttribute materialsmine:PoissonsRatio,
+                materialsmine:YoungsModulus ],
+        [ a materialsmine:tango_black ;
+            sio:hasAttribute materialsmine:PoissonsRatio,
+                materialsmine:YoungsModulus ] ;
+    <nanopub:hasAssertion> materialsmine:i_s_00000001_assertion .
+
+
+
+
+    materialsmine:metamaterial sio:hasPart materialsmine:constituentMaterial
+    materialsmine:geometry sio:describes materialsmine:metamaterial 
+    materialsmine:constituentMaterial sio:hasAttribute materialsmine:property
+    materialsmine:metamaterial sio:hasAttribute materialsmine:effectiveProperty
+    materialsmine:effectiveProperty prov:wasDerivedFrom materialsmine:geometry
+    materialsmine:effectiveProperty sio:inRelationTo materialsmine:property
+    materialsmine:mechanicalProperty rdfs:subClassOf materialsmine:property
+    materialsmine:poissonRatio rdfs:subClassOf materialsmine:mechanicalProperty
+    materialsmine:youngsModulus rdfs:subClassOf materialsmine:mechanicalProperty
+    materialsmine:effectiveMechanicalProperty sio:inRelationTo materialsmine:mechanicalProperty
+    materialsmine:effectivePoissonRatio rdfs:subClassOf materialsmine:effectiveMechanicalProperty
+    materialsmine:effectiveYoungsModulus rdfs:subClassOf materialsmine:effectiveMechanicalProperty
+    materialsmine:c4v rdfs:subClassOf materialsmine:geometry 
  
+ 
+ 
+ 
+ visualization
+
+
+ <http://materialsmine.org/ns/PolymerNanocomposite> a <http://materialsmine.org/ns/PNCClass>.
+
+<http://materialsmine.org/ns/PNCClass> rdfs:subClassOf owl:Class.
+
+<http://materialsmine.org/ns/PNCClass> a owl:Class;
+  whyis:hasConstraints "class_constraints.json";
+  whyis:hasOutgoing "outgoing_class.json";
+  whyis:hasIncoming "incoming_class.json";
+  whyis:newInstanceView "new_instance_view.html";
+  whyis:hasView "class_view.html";
+  whyis:hasFacets "pnc_facets.json".
+
+
+
+
+
+
+
+<a href="nanomineHome_view.html">Nanomine</a>
+
+
+
+
+
+
+
+
+
+ id="material-property-select-x" to id="material-effective-property-select-x"
+ id="material-property-select-y" to id="material-effective-property-select-y"
+ id="fillerFilter" to id="geometry"
+
+
+//removed from vocab on 4th nov
+<http://nanomine.org/ns/PolymerNanocomposite> a <http://materialsmine.org/ns/Metamaterials>.
+
+//end 
+
+
+
+//removed from visualization on 4th nov
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        
+        <!-- css code -->
+        <style>
+            body { /*pad the body section to avoid overlapping with the navbar*/ 
+                padding-top:70px; 
+            }
+            hr { 
+                display:block;
+                margin-top:0.5em;
+                margin-bottom:0.5em;
+                margin-left:auto;
+                margin-right:auto;
+                border-style:inset;
+                border-width:1px;
+            } 
+            .goog-menu-vertical { /*limit the category filter dropdown list item number*/
+                max-height:100px;
+                overflow-y:auto;
+            }
+            .google-visualization-table-th { /* center the google table chart head */
+                text-align: center;
+            }
+        </style>
+       
+    </head>
+    
+    <body>
+        <p>Welcome to Materialsmine Visualization site</p>>
+    </body>
+</html>
+
+
+//end of removal
+
+
         <!-- jQuery code -->
         <script>
             $(document).ready(function() {
