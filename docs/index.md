@@ -1,3 +1,7 @@
-# MetaMine Ontology
-<body align='center' style="background-color:FF5733">
-</body>
+---
+layout: default
+---
+
+```
+| Ontology(./ontology.html).| Example Knowledge Graph(./exampleKG.html).| Applications(./applications.html).
+```
