@@ -10,7 +10,7 @@ layout: default
 
 [Abstract](#abstract) | [Workflow](#workflow) | [License](#license) | [Acknowledgements](#acknowledgements)
 
-#Abstract <id="abstract>
+<h1 id="abstract">Abstract</h1>
 >Metamaterials is a multidisciplinary domain. They enable extreme miniaturization and can be customized to support novel properties that are currently not accessible, leading to entirely new systems. Moreover, they are created by changing the geometry of currently available materials, which leads to multiple challenges for representing various geometries based on symmetries, dimensionalities and type of data. Metamaterials, as comparatively the newest field in the materials science domain, lacks a common data representation and a repository which could hold all the different metamaterials and help scientists discover new advanced metamaterials. We also provide a knowledge graph template and semantic extract, transform, and load-r scripts as a guide for ingesting data in a knowledge graph, which gets its structure using our Metamine Ontology. A set of SPARQL queries is also provided as a stepping stone which allows researchers to extract knowledge from the created knowledge graph. All this is available on our resource website with a tutorial. We continue to provide a vision of a knowledge graph of materials science ontologies similar to BioPortal using our ontology concepts to provide a rich platform for researchers.
 
 
