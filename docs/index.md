@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-|:------------------------------|:------------------------------|:------------------------------|
+||||
 ||[Ontology](./ontology.html)|    [Example Knowledge Graph](./exampleKG.html)|[Applications](./applications.html)|
 
 <h2 id="overview">Overview</h2>
