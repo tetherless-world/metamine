@@ -12,7 +12,9 @@
 > <p align="justify">Data should be entered on an online spreadsheet such as google sheets for easy accessibility.
 >The customized SETLr script on Whyis converts the data from the spreadsheet to a knowledge graph. The structure of which is provided by our Metamine Ontology.</p>
 
-<img src="images/workflow_kg.pdf" style="width:800px;height:500px;">
+<ul> 
+<iframe src="images/workflow_kg.pdf" style="width: 800px;height: 400px;border: none;"></iframe>
+</ul>
 
 <h2 id="exampleKG">Example Knowledge Graph</h2>
 
