@@ -21,6 +21,6 @@
 
 <iframe src="images/MetamineSampleData.pdf" style="width: 800px;height: 350px;border: none;"></iframe>
 
-> <p align="justify"> The above sample data was converted to a knowledge graph by using the customized setlr script, which could be found at https://github.com/tetherless-world/metamine/blob/master/setl/materialsmine_kg.setl.ttl wich incorporates our MO for providing structure to the generated knowledge graph.</p>
+> <p align="justify"> The above sample data was converted to a knowledge graph by using the customized setlr script, which could be found at <a href="https://github.com/tetherless-world/metamine/blob/master/setl/materialsmine_kg.setl.ttl"> https://github.com/tetherless-world/metamine/blob/master/setl/materialsmine_kg.setl.ttl <a> which incorporates our MO for providing structure to the generated knowledge graph.</p>
 
 [back](./)
