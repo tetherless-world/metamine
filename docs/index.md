@@ -1,11 +1,10 @@
 ---
 layout: default
 ---
-```
-||||
+
 |:--------------------|:--------------------|:--------------------|
 |[Ontology](./ontology.html)|[Example Knowledge Graph](./exampleKG.html)|[Applications](./applications.html)|
-```
+
 
 <h2 id="overview">Overview</h2>
 > <p align="justify"> MetaMine Ontology is created to provide structure to the available structural metamaterials. We also demonstrate how a knowledge graph could be created using our ontology and provide our ontologies applications in and outside structural metamaterial domian. This website demonstrates few of the many capabilities (reusability and extensibility) of our ontology and the vision of semantics being the backbone of materials science. This could be executed by connecting a knowledge graph of all the available materials science ontologies and knowledge graphs as shown in our paper. </p>
