@@ -8,15 +8,19 @@
 |[Workflow](#workflow)|[Example Knowledge Graph](#exampleKG)|
 
 <h2 id="workflow">Workflow</h2>
-> <p align="justify">Data could be directly entered into the system by the authors or could be curated from published works and added to the system by researchers.</p>
-> <p align="justify">Data should be entered on an online spreadsheet such as google sheets for easy accessibility.
->The customized SETLr script on Whyis converts the data from the spreadsheet to a knowledge graph. The structure of which is provided by our Metamine Ontology.</p>
-
+> <p align="justify">The diagram below depicts the workflow used to create a knowledge graph from a geometry.</p>
 <ul> 
-<iframe src="images/workflow_kg.pdf" style="width: 800px;height: 400px;border: none;"></iframe>
+<iframe src="images/workflow_kg.pdf" style="width: 800px;height: 350px;border: none;"></iframe>
 </ul>
+> <p align="justify">Data could be directly entered into the system by the authors or could be curated from published works and added to the system by researchers.</p>
+> <p align="justify">Data should be entered on an online spreadsheet such as google sheets for easy accessibility.</p>
+> <p align="justify">The customized SETLr script on Whyis converts the data from the spreadsheet to a knowledge graph. The structure of which is provided by our Metamine Ontology.</p>
 
 <h2 id="exampleKG">Example Knowledge Graph</h2>
-
+> <p align="justify">The example knowledge graph was created using the above method for 2-D isometric static metamaterials. The sample data used to create the example knowledge graph is shown in the figure below. </p>
+<ul> 
+<iframe src="images/MetamineSampleData_kg.pdf" style="width: 800px;height: 350px;border: none;"></iframe>
+</ul>
+> <p align="justify"> The above sample data was converted to a knowledge graph by using the customized setlr script, which could be found at https://github.com/tetherless-world/metamine/blob/master/setl/materialsmine_kg.setl.ttl wich incorporates our MO for providing structure to the generated knowledge graph.</p>
 
 [back](./)
