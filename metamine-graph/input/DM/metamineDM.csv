@@ -11,7 +11,7 @@ geometry_data,Geometry data,The actual geometry design,,,,,,,sio:MatrixChart,,,?
 materials_label,Materials label,Defining how to find the the materials used for the design,,sio:Label,{materials},,,,,,,,,,
 effective_poisson_ratio,Effective Poisson ratio,Poisson ratio of the generated metamaterial,,materialsmine:EffectivePoissonsRatio,??metamaterial,,,,,,,,,,
 effective_youngs_modulus,Effective Youngs Modulus,Youngs modulus of the generated metamaterial,,materialsmine:EffectiveYoungsModulus,??metamaterial,uo:0000110,,,,,,,,,
-??author,Author,,,,,,,,sio:Human,sio:AuthorRole,??material_design,,,,
+??author,Author,,,,,,,,sio:Human,sio:AuthorRole,,??material_design,,,
 ??material_design,Material Design,,,,,,,,sio:Design,,,??metamaterial,,,
 ??metamaterial,Metamaterial,Metamaterial described by its geometry and which has some effective properties,,,,,,,materialsmine:Metamaterial,,,,,,
 ??geometry,Geometry,"Geometry describing Metamaterial, geosparql geometry class could be used",,,,,,,materialsmine:Geometry,,sio:describes,??metamaterial,,,
