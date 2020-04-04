@@ -19,8 +19,8 @@
 <h2 id="exampleKG">Example Knowledge Graph</h2>
 > <p align="justify">The example knowledge graph was created using the above method for 2-D isometric static metamaterials. The sample data used to create the example knowledge graph is shown in the figure below. </p>
 
-<iframe src="images/MetamineSampleData.pdf" style="width: 800px;height: 350px;border: none;"></iframe>
+<iframe src="images/MetamineSampleData.pdf" style="width: 800px;height: 4000px;border: none;"></iframe>
 
-> <p align="justify"> The above sample data was converted to a knowledge graph by using the customized setlr script, which could be found at <a href="https://github.com/tetherless-world/metamine/blob/master/setl/materialsmine_kg.setl.ttl"> https://github.com/tetherless-world/metamine/blob/master/setl/materialsmine_kg.setl.ttl <a> which incorporates our MO for providing structure to the generated knowledge graph.</p>
+> <p align="justify"> The above sample data was converted to a <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.ttl">knowledge graph</a> by using a customized setlr script available <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.setl.ttl"> here</a>. The KG creation is based on the structure provided by our MO, found <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine.ttl">here</a>.</p>
 
 [back](./)

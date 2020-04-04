@@ -1,0 +1,171 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:          <http://www.w3.org/ns/prov#> .
+@prefix sio:           <http://semanticscience.org/resource/> .
+@prefix dcat:          <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix ov:            <http://open.vocab.org/terms/> .
+@prefix setl:          <http://purl.org/twc/vocab/setl/> .
+@prefix csvw:          <http://www.w3.org/ns/csvw#> .
+@prefix pv:            <http://purl.org/net/provenance/ns#>.
+@prefix bibo:          <http://purl.org/ontology/bibo/>.
+@prefix uo:            <http://purl.obolibrary.org/obo/UO_>.
+@prefix obo:           <http://purl.obolibrary.org/obo/>.
+
+@prefix :              <http://metamine.org/setl/> .
+
+
+:imports_static_data a csvw:Table, setl:Table;
+  prov:wasGeneratedBy [
+    a setl:Extract;
+    prov:used <https://docs.google.com/spreadsheets/d/1XG87nahuO_JWjvnmcwAUSO7KH2e2RIBu7rO4o4i1LIo/export?exportFormat=csv&gid=0>;
+  ].
+
+
+:knowledge_graph a setl:SemanticETLScript;
+  rdfs:label "metamine Knowledge Graph SETL Script".
+
+:metamine_Knowledge_graph a void:Dataset;
+  prov:wasGeneratedBy :knowledge_graph, [
+    a setl:Transform, setl:JSLDT;
+    prov:used :imports_static_data;
+    setl:hasContext '''{
+  "@vocab" :  "http://metamine.org/",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "bibo" :    "http://purl.org/ontology/bibo/",
+  "uo" :    "http://purl.obolibrary.org/obo/UO_",
+  "obo" :    "http://purl.obolibrary.org/obo/",
+  "metamine" :    "http://metamine.org/"
+}''';
+    prov:value '''[{
+	"@graph": [{
+		"@id": "metamine:nanopub/{{row.id}}",
+		"@type": "nanopub:Nanopublication",
+		"nanopub:hasAssertion": {
+			"@id": "metamine:{{row.id}}_assertion",
+			"@type": "nanopub:Assertion",
+			"@graph": {
+				"@id": "metamine:{{row.id}}",
+				"@type": "metamine:Metamaterial",
+				"sio:hasAttribute": [{
+						"@id": "metamine:{{row.id}}/effective_poissons_ratio",
+						"@type": "metamine:EffectivePoissonsRatio",
+						"sio:hasValue": {
+							"@value": "{{row.effective_poissons_ratio}}",
+							"@type": "xsd:double"
+						},
+						"sio:inRelationTo" : [{ "@id":"metamine:{{row.id}}/{{row.constituent_material_1}}/poissons_ratio"},{ "@id":"metamine:{{row.id}}/{{row.constituent_material_2}}/poissons_ratio"}]
+					},
+					{
+						"@id": "metamine:{{row.id}}/effective_youngs_modulus",
+						"@type": "metamine:EffectiveYoungsModulus",
+						"sio:hasValue": {
+							"@value": "{{row.effective_youngs_modulus}}",
+							"@type": "xsd:double"
+						},
+						"sio:hasUnit": {
+							"@id": "http://purl.obolibrary.org/obo/UO_0000110"
+						},
+						"sio:inRelationTo" : [{ "@id":"metamine:{{row.id}}/{{row.constituent_material_1}}/youngs_modulus"},{ "@id":"metamine:{{row.id}}/{{row.constituent_material_2}}/youngs_modulus"}]
+					}
+				],
+				"sio:hasPart": [{
+						"@id": "metamine:{{row.id}}/{{row.constituent_material_1}}",
+						"@type": "{{row.id}}/{{row.constituent_material_1}}",
+						"sio:hasAttribute": [{
+								"@type": "metamine:PoissonsRatio",
+								"@id": "metamine:{{row.id}}/{{row.constituent_material_1}}/poissons_ratio",
+								"sio:hasValue": {
+									"@value": "{{row.constituent_material_1}}/{{row.constituent_material_1_poissons_ratio}}",
+									"@type": "xsd:double"
+								}
+							},
+							{
+								"@type": "metamine:YoungsModulus",
+								"@id": "metamine:{{row.id}}/{{row.constituent_material_1}}/youngs_modulus",
+								"sio:hasValue": {
+									"@value": "{{row.constituent_material_1}}/{{row.constituent_material_1_youngs_modulus_value}}",
+									"@type": "xsd:double"
+								},
+								"sio:hasUnit": {
+									"@id": "http://purl.obolibrary.org/obo/UO_0000110"
+								}
+							}
+						]
+					},
+					{
+						"@id": "metamine:{{row.id}}/{{row.constituent_material_2}}",
+						"@type": "{{row.id}}/{{row.constituent_material_2}}",
+						"sio:hasAttribute": [{
+								"@id": "metamine:{{row.id}}/{{row.constituent_material_2}}/poissons_ratio",
+								"@type": "metamine:PoissonsRatio",
+								"sio:hasValue": {
+									"@value": "{{row.constituent_material_2}}/{{row.constituent_material_2_poissons_ratio}}",
+									"@type": "xsd:double"
+								}
+							},
+							{
+								"@id": "metamine:{{row.id}}/{{row.constituent_material_2}}/youngs_modulus",
+								"@type": "metamine:YoungsModulus",
+								"sio:hasValue": {
+									"@value": "{{row.constituent_material_2}}/{{row.constituent_material_2_youngs_modulus_value}}",
+									"@type": "xsd:double"
+								},
+								"sio:hasUnit": {
+									"@id": "http://purl.obolibrary.org/obo/UO_0000110"
+								}
+							}
+						]
+					}
+				],
+				"sio:isDescribedBy": {
+					"@id": "metamine:{{row.id}}/{{row.geometry_type}}",
+					"@type": "metamine:{{row.geometry_type}}",
+					"rdfs:label": "{{row.id}}/{{row.geometry_label}}",
+					"sio:hasValue": {
+						"@value": "{{row.geometry_data}}",
+						"@type": "{{row.geometry_data_type}}"
+					} 
+
+				}
+			}
+
+		},
+		"nanopub:hasProvenance":{
+			"@id": "metamine:{{row.id}}_provenance",
+			"@type": "nanopub:Provenance",
+			"@graph": [{
+				"@id": "metamine:{{row.id}}_assertion",
+				"dcterms:creator": {
+					"@id": "metamine:{{row.id}}/{{row.authors}}",
+					"@type": "prov:Organization"
+				}
+			}]
+		}
+
+
+	}]
+
+}]'''].
+
+
+
+<metamine_kg2.trig> a pv:File;
+    dcterms:format "application/trig";
+    prov:wasGeneratedBy [
+      a setl:Load;
+      prov:used :metamine_Knowledge_graph ;
+    ].

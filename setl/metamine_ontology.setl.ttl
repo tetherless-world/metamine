@@ -1,0 +1,324 @@
+@prefix rdf:           <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:          <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:           <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:           <http://www.w3.org/2002/07/owl#> .
+@prefix skos:          <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:          <http://www.w3.org/ns/prov#> .
+@prefix sio:           <http://semanticscience.org/resource/> .
+@prefix dcat:          <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:       <http://purl.org/dc/terms/> .
+@prefix void:          <http://rdfs.org/ns/void#> .
+@prefix foaf:          <http://xmlns.com/foaf/0.1/> .
+@prefix ov:            <http://open.vocab.org/terms/> .
+@prefix setl:          <http://purl.org/twc/vocab/setl/> .
+@prefix csvw:          <http://www.w3.org/ns/csvw#> .
+@prefix pv:            <http://purl.org/net/provenance/ns#>.
+@prefix bibo:          <http://purl.org/ontology/bibo/>.
+@prefix uo:            <http://purl.obolibrary.org/obo/UO_>.
+@prefix obo:           <http://purl.obolibrary.org/obo/>.
+
+@prefix :              <http://metamine.org/setl/> .
+
+
+:imports_table a csvw:Table, setl:Table;
+  prov:wasGeneratedBy [
+    a setl:Extract;
+    prov:used <https://docs.google.com/spreadsheets/d/1IoqrMltOCDU7xzDkvZse8-K97NgIbjwl8nxCG9u8Fds/export?exportFormat=csv&gid=1566548190>;
+  ].
+
+:ontology_annotations_table a csvw:Table, setl:Table;
+  prov:wasGeneratedBy [
+    a setl:Extract;
+    prov:used <https://docs.google.com/spreadsheets/d/1IoqrMltOCDU7xzDkvZse8-K97NgIbjwl8nxCG9u8Fds/export?exportFormat=csv&gid=1156198524>;
+  ].
+
+:publication_classes_table a csvw:Table, setl:Table;
+  prov:wasGeneratedBy [
+    a setl:Extract;
+    prov:used <https://docs.google.com/spreadsheets/d/1IoqrMltOCDU7xzDkvZse8-K97NgIbjwl8nxCG9u8Fds/export?exportFormat=csv&gid=1455505598>;
+  ].
+
+:property_classes_table a csvw:Table, setl:Table;
+  prov:wasGeneratedBy [
+    a setl:Extract;
+    prov:used <https://docs.google.com/spreadsheets/d/1IoqrMltOCDU7xzDkvZse8-K97NgIbjwl8nxCG9u8Fds/export?exportFormat=csv&gid=1409333888>;
+  ].
+
+:material_classes_table a csvw:Table, setl:Table;
+  prov:wasGeneratedBy [
+    a setl:Extract;
+    prov:used <https://docs.google.com/spreadsheets/d/1IoqrMltOCDU7xzDkvZse8-K97NgIbjwl8nxCG9u8Fds/export?exportFormat=csv&gid=1914806279>;
+  ].
+
+:geometry_classes_table a csvw:Table, setl:Table;
+  prov:wasGeneratedBy [
+    a setl:Extract;
+    prov:used <https://docs.google.com/spreadsheets/d/1IoqrMltOCDU7xzDkvZse8-K97NgIbjwl8nxCG9u8Fds/export?exportFormat=csv&gid=0>;
+  ].
+
+:effective_properties_table a csvw:Table, setl:Table;
+  prov:wasGeneratedBy [
+    a setl:Extract;
+    prov:used <https://docs.google.com/spreadsheets/d/1IoqrMltOCDU7xzDkvZse8-K97NgIbjwl8nxCG9u8Fds/export?exportFormat=csv&gid=1720758431>;
+  ].
+
+:ontology a setl:SemanticETLScript;
+  rdfs:label "metamine Ontology SETL Script".
+
+:metamine_ontology a void:Dataset;
+  prov:wasGeneratedBy :ontology, [
+    a setl:Transform, setl:JSLDT;
+    prov:used :imports_table;
+    setl:hasContext '''{
+  "@vocab" :  "http://metamine.org/",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "bibo" :    "http://purl.org/ontology/bibo/",
+  "metamine" :    "http://metamine.org/ns/"
+}''';
+    prov:value '''[{
+	"@id": "http://metamine.org/ns",
+	"@graph": [{
+		"@id": "http://metamine.org/ns",
+		"owl:imports": {"@id": "{{row.uri}}", "rdfs:label": "{{row.label}}"}
+	}]
+}]'''], [
+    a setl:Transform, setl:JSLDT;
+    prov:used :ontology_annotations_table;
+    setl:hasContext '''{
+  "@vocab" :  "http://metamine.org/",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "dcterms"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "metamine" :    "http://metamine.org/ns/"
+}''';
+    prov:value '''[{
+	"@id": "http://metamine.org/ns",
+	"@graph": [{
+		"@id": "http://metamine.org/ns",
+                "@type" : "owl:Ontology",
+		"{{row.annotation}}": [
+                    { "@if" : "not isempty(row.URI)", "@id" : "{{row.URI}}"},
+                    { "@if" : "isempty(row.URI)", "@value" : "{{row.value}}"}
+                ]
+	}]
+}]'''], [
+    a setl:Transform, setl:JSLDT;
+    prov:used :publication_classes_table;
+    setl:hasContext '''{
+  "@vocab" :  "http://metamine.org/",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "bibo" :    "http://purl.org/ontology/bibo/",
+
+  "metamine" :    "http://metamine.org/ns/"
+}''';
+    prov:value '''[{
+	"@id": "http://metamine.org/ns",
+	"@graph": [{
+		"@id": "{{row.uri}}",
+                "@type" : "owl:Class",
+                "rdfs:label" : "{{row.label}}",
+                "skos:altLabel" : [ { "@if" : "not isempty(row.altLabel)", "@value": "{{row.altLabel}}" }],
+                "skos:definition" : [ { "@if" : "not isempty(row.definition)", "@value": "{{row.definition}}" }],
+                "rdfs:subClassOf" : [
+                  { "@if" : "not isempty(row.subClassOf)",
+                    "@for" : "superClass in row.subClassOf.split(', ')",
+                    "@do" : { "@id": "{{superClass}}" }
+                  }
+                ]
+	}]
+}]'''], [
+    a setl:Transform, setl:JSLDT;
+    prov:used :property_classes_table;
+    setl:hasContext '''{
+  "@vocab" :  "http://metamine.org/",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "metamine" :    "http://metamine.org/ns/"
+}''';
+    prov:value '''[{
+	"@id": "http://metamine.org/ns",
+	"@graph": [{
+		"@id": "{{row.uri}}",
+                "@type" : "owl:Class",
+                "rdfs:label" : "{{row.label}}",
+                "skos:definition" : [ { "@if" : "not isempty(row.definition)", "@value": "{{row.definition}}" }],
+                "metamine:hasSelector" : [ { "@if" : "not isempty(row.xpath)", "@value": "{{row.xpath}}" }],
+                "rdfs:subClassOf" : [
+                    { "@if" : "not isempty(row.subClassOf)",
+                      "@for" : "superClass in row.subClassOf.split(', ')",
+                      "@do" : { "@id": "{{superClass}}" }
+                    },
+                    { "@if" : "not isempty(row.unit)",
+                      "@type" : "owl:Restriction",
+                      "owl:onProperty" : { "@id":"sio:hasUnit"},
+                      "owl:hasValue" : { "@id": "metamine:unit/{{slugify(row.unit)}}", "rdfs:label" : "{{row.unit}}", "@type" : "sio:UnitOfMeasurement" }
+                    }
+                ]
+	}]
+}]'''], [
+    a setl:Transform, setl:JSLDT;
+    prov:used :material_classes_table;
+    setl:hasContext '''{
+  "@vocab" :  "http://metamine.org/",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "metamine" :    "http://metamine.org/ns/"
+}''';
+    prov:value '''[{
+	"@id": "http://metamine.org/ns",
+	"@graph": [{
+		"@id": "{{row.uri}}",
+                "@type" : "owl:Class",
+                "rdfs:label" : "{{row.label}}",
+                "skos:altLabel" : [ { "@if" : "not isempty(row.altLabel)", "@value": "{{row.altLabel}}" }],
+                "skos:definition" : [ { "@if" : "not isempty(row.definition)", "@value": "{{row.definition}}" }],
+                "prov:wasQuotedFrom" : [ { "@if" : "not isempty(row.wasQuotedFrom)", "@value": "{{row.wasQuotedFrom}}" }],
+                "sio:isDescribedBy" : [{"@if" : "not isempty(row.isDescribedBy)", "@value": "{{row.isDescribedBy}}"}],
+                "rdfs:subClassOf" : [
+                    { "@if" : "not isempty(row.subClassOf)",
+                      "@for" : "superClass in row.subClassOf.split(', ')",
+                      "@do" : { "@id": "{{superClass}}" }
+                    },
+                    { "@if" : "not isempty(row.unit)",
+                      "@type" : "owl:Restriction",
+                      "owl:onProperty" : { "@id":"sio:hasUnit"},
+                      "owl:hasValue" : { "@id": "metamine:unit/{{slugify(row.unit)}}", "rdfs:label" : "{{row.unit}}", "@type" : "sio:UnitOfMeasurement" }
+                    }
+                ]
+	}]
+}]'''], [
+    a setl:Transform, setl:JSLDT;
+    prov:used :geometry_classes_table;
+    setl:hasContext '''{
+  "@vocab" :  "http://metamine.org/",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "metamine" :    "http://metamine.org/ns/"
+}''';
+    prov:value '''[{
+	"@id": "http://metamine.org/ns",
+	"@graph": [{
+		"@id": "{{row.uri}}",
+                "@type" : "owl:Class",
+                "rdfs:label" : "{{row.label}}",
+                "skos:definition" : [ { "@if" : "not isempty(row.definition)", "@value": "{{row.definition}}" }],
+                "metamine:hasSelector" : [ { "@if" : "not isempty(row.xpath)", "@value": "{{row.xpath}}" }],
+                "rdfs:subClassOf" : [
+                    { "@if" : "not isempty(row.subClassOf)",
+                      "@for" : "superClass in row.subClassOf.split(', ')",
+                      "@do" : { "@id": "{{superClass}}" }
+                    },
+                    { "@if" : "not isempty(row.unit)",
+                      "@type" : "owl:Restriction",
+                      "owl:onProperty" : { "@id":"sio:hasUnit"},
+                      "owl:hasValue" : { "@id": "metamine:unit/{{slugify(row.unit)}}", "rdfs:label" : "{{row.unit}}", "@type" : "sio:UnitOfMeasurement" }
+                    }
+                ]
+	}]
+}]'''],[
+    a setl:Transform, setl:JSLDT;
+    prov:used :effective_properties_table;
+    setl:hasContext '''{
+  "@vocab" :  "http://metamine.org/",
+  "sio" :     "http://semanticscience.org/resource/",
+  "chear" :   "http://hadatac.org/ont/chear#",
+  "skos" :    "http://www.w3.org/2004/02/skos/core#",
+  "prov" :    "http://www.w3.org/ns/prov#",
+  "dc"   :    "http://purl.org/dc/terms/",
+  "cmo"  :    "http://purl.org/twc/ontologies/cmo.owl#",
+  "owl": "http://www.w3.org/2002/07/owl#",
+  "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+  "rdfs" :    "http://www.w3.org/2000/01/rdf-schema#",
+  "uo" : "http://purl.obolibrary.org/obo/UO_",
+  "obo" : "http://purl.obolibrary.org/obo/",
+  "metamine" :    "http://metamine.org/ns/"
+}''';
+    prov:value '''[{
+	"@id": "http://metamine.org/ns",
+	"@graph": [{
+		"@id": "{{row.uri}}",
+                "@type" : "owl:Class",
+                "rdfs:label" : "{{row.label}}",
+                "skos:definition" : [ { "@if" : "not isempty(row.definition)", "@value": "{{row.definition}}" }],
+                "metamine:hasSelector" : [ { "@if" : "not isempty(row.xpath)", "@value": "{{row.xpath}}" }],
+                "rdfs:subClassOf" : [
+                    { "@if" : "not isempty(row.subClassOf)",
+                      "@for" : "superClass in row.subClassOf.split(', ')",
+                      "@do" : { "@id": "{{superClass}}" }
+                    },
+                    { "@if" : "not isempty(row.unit)",
+                      "@type" : "owl:Restriction",
+                      "owl:onProperty" : { "@id":"sio:hasUnit"},
+                      "owl:hasValue" : { "@id": "metamine:unit/{{slugify(row.unit)}}", "rdfs:label" : "{{row.unit}}", "@type" : "sio:UnitOfMeasurement" }
+                    },
+                    { "@if" : "not isempty(row.wasDerivedFrom)",
+                      "@for" : "derived in row.wasDerivedFrom.split(', ')",
+                      "@do" : {
+                        "@type" : "owl:Restriction",
+                        "owl:onProperty" : { "@id":"sio:wasDerivedFrom"},
+                        "owl:someValuesFrom" : { "@id": "{{derived}}" }
+                      }
+                    },
+                    { "@if" : "not isempty(row.inRelationTo)",
+                      "@for" : "relation in row.inRelationTo.split(', ')",
+                      "@do" : {
+                        "@type" : "owl:Restriction",
+                        "owl:onProperty" : { "@id":"sio:inRelationTo"},
+                        "owl:someValuesFrom" : { "@id": "{{relation}}" }
+                      }
+                    }
+                ]
+	}]
+}]'''].
+
+
+<metamine_ontology.trig> a pv:File;
+    dcterms:format "application/trig";
+    prov:wasGeneratedBy [
+      a setl:Load;
+      prov:used :metamine_ontology ;
+    ].

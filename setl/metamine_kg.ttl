@@ -1,0 +1,554 @@
+@prefix metamine: <http://metamine.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+
+metamine:i_s_00000001 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000001/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000001/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000001/tango_black>,
+        <http://metamine.org/i_s_00000001/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000001/C4v> .
+
+metamine:i_s_00000002 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000002/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000002/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000002/tango_black>,
+        <http://metamine.org/i_s_00000002/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000002/C4v> .
+
+metamine:i_s_00000003 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000003/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000003/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000003/tango_black>,
+        <http://metamine.org/i_s_00000003/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000003/C4v> .
+
+metamine:i_s_00000004 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000004/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000004/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000004/tango_black>,
+        <http://metamine.org/i_s_00000004/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000004/C4v> .
+
+metamine:i_s_00000005 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000005/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000005/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000005/tango_black>,
+        <http://metamine.org/i_s_00000005/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000005/C4v> .
+
+metamine:i_s_00000006 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000006/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000006/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000006/tango_black>,
+        <http://metamine.org/i_s_00000006/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000006/C4v> .
+
+metamine:i_s_00000007 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000007/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000007/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000007/tango_black>,
+        <http://metamine.org/i_s_00000007/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000007/C4v> .
+
+metamine:i_s_00000008 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000008/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000008/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000008/tango_black>,
+        <http://metamine.org/i_s_00000008/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000008/C4v> .
+
+metamine:i_s_00000009 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000009/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000009/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000009/tango_black>,
+        <http://metamine.org/i_s_00000009/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000009/C4v> .
+
+metamine:i_s_00000010 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/i_s_00000010/effective_poissons_ratio>,
+        <http://metamine.org/i_s_00000010/effective_youngs_modulus> ;
+    sio:hasPart <http://metamine.org/i_s_00000010/tango_black>,
+        <http://metamine.org/i_s_00000010/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/i_s_00000010/C4v> .
+
+<http://metamine.org/nanopub/i_s_00000001> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000001_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000001_provenance .
+
+<http://metamine.org/nanopub/i_s_00000002> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000002_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000002_provenance .
+
+<http://metamine.org/nanopub/i_s_00000003> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000003_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000003_provenance .
+
+<http://metamine.org/nanopub/i_s_00000004> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000004_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000004_provenance .
+
+<http://metamine.org/nanopub/i_s_00000005> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000005_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000005_provenance .
+
+<http://metamine.org/nanopub/i_s_00000006> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000006_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000006_provenance .
+
+<http://metamine.org/nanopub/i_s_00000007> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000007_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000007_provenance .
+
+<http://metamine.org/nanopub/i_s_00000008> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000008_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000008_provenance .
+
+<http://metamine.org/nanopub/i_s_00000009> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000009_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000009_provenance .
+
+<http://metamine.org/nanopub/i_s_00000010> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:i_s_00000010_assertion ;
+    <nanopub:hasProvenance> metamine:i_s_00000010_provenance .
+
+<http://metamine.org/i_s_00000001/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000001/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000001/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000001/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.33"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000001/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000001/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000001/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "2.00E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000001/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000001/vero_white/youngs_modulus> .
+
+metamine:i_s_00000001_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000001/Caltech> .
+
+metamine:i_s_00000001_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000002/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000002/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000002/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000002/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.306472"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000002/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000002/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000002/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "1.80E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000002/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000002/vero_white/youngs_modulus> .
+
+metamine:i_s_00000002_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000002/Caltech> .
+
+metamine:i_s_00000002_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000003/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000003/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,0,0,1,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000003/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000003/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.317484"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000003/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000003/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000003/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "1.82E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000003/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000003/vero_white/youngs_modulus> .
+
+metamine:i_s_00000003_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000003/Caltech> .
+
+metamine:i_s_00000003_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000004/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000004/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,0,0,1,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000004/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000004/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.314845"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000004/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000004/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000004/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "1.43E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000004/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000004/vero_white/youngs_modulus> .
+
+metamine:i_s_00000004_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000004/Caltech> .
+
+metamine:i_s_00000004_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000005/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000005/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,0,1,0,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000005/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000005/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.312472"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000005/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000005/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000005/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "1.59E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000005/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000005/vero_white/youngs_modulus> .
+
+metamine:i_s_00000005_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000005/Caltech> .
+
+metamine:i_s_00000005_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000006/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000006/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,0,1,0,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000006/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000006/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.292545"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000006/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000006/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000006/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "1.54E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000006/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000006/vero_white/youngs_modulus> .
+
+metamine:i_s_00000006_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000006/Caltech> .
+
+metamine:i_s_00000006_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000007/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000007/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,0,1,1,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000007/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000007/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.312935"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000007/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000007/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000007/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "1.53E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000007/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000007/vero_white/youngs_modulus> .
+
+metamine:i_s_00000007_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000007/Caltech> .
+
+metamine:i_s_00000007_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000008/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000008/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,0,1,1,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000008/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000008/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.276555"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000008/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000008/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000008/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "1.05E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000008/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000008/vero_white/youngs_modulus> .
+
+metamine:i_s_00000008_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000008/Caltech> .
+
+metamine:i_s_00000008_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000009/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000009/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,1,0,0,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000009/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000009/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.308478"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000009/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000009/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000009/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "1.65E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000009/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000009/vero_white/youngs_modulus> .
+
+metamine:i_s_00000009_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000009/Caltech> .
+
+metamine:i_s_00000009_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000010/C4v> a metamine:C4v ;
+    rdfs:label "i_s_00000010/geometry type 2d C4v octant bit layout msb" ;
+    sio:hasValue "0,0,0,0,0,0,0,0,0,0,0,1,0,0,0"^^metamine:embedded .
+
+<http://metamine.org/i_s_00000010/Caltech> a prov:Organization .
+
+<http://metamine.org/i_s_00000010/effective_poissons_ratio> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.288084"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000010/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000010/vero_white/poissons_ratio> .
+
+<http://metamine.org/i_s_00000010/effective_youngs_modulus> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "1.55E+09"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/i_s_00000010/tango_black/youngs_modulus>,
+        <http://metamine.org/i_s_00000010/vero_white/youngs_modulus> .
+
+metamine:i_s_00000010_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/i_s_00000010/Caltech> .
+
+metamine:i_s_00000010_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/i_s_00000001/tango_black> a <http://metamine.org/i_s_00000001/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000001/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000001/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000001/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000001/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000001/vero_white> a <http://metamine.org/i_s_00000001/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000001/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000001/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000001/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000001/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000002/tango_black> a <http://metamine.org/i_s_00000002/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000002/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000002/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000002/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000002/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000002/vero_white> a <http://metamine.org/i_s_00000002/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000002/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000002/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000002/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000002/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000003/tango_black> a <http://metamine.org/i_s_00000003/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000003/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000003/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000003/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000003/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000003/vero_white> a <http://metamine.org/i_s_00000003/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000003/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000003/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000003/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000003/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000004/tango_black> a <http://metamine.org/i_s_00000004/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000004/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000004/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000004/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000004/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000004/vero_white> a <http://metamine.org/i_s_00000004/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000004/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000004/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000004/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000004/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000005/tango_black> a <http://metamine.org/i_s_00000005/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000005/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000005/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000005/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000005/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000005/vero_white> a <http://metamine.org/i_s_00000005/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000005/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000005/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000005/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000005/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000006/tango_black> a <http://metamine.org/i_s_00000006/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000006/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000006/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000006/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000006/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000006/vero_white> a <http://metamine.org/i_s_00000006/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000006/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000006/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000006/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000006/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000007/tango_black> a <http://metamine.org/i_s_00000007/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000007/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000007/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000007/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000007/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000007/vero_white> a <http://metamine.org/i_s_00000007/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000007/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000007/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000007/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000007/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000008/tango_black> a <http://metamine.org/i_s_00000008/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000008/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000008/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000008/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000008/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000008/vero_white> a <http://metamine.org/i_s_00000008/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000008/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000008/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000008/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000008/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000009/tango_black> a <http://metamine.org/i_s_00000009/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000009/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000009/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000009/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000009/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000009/vero_white> a <http://metamine.org/i_s_00000009/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000009/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000009/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000009/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000009/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000010/tango_black> a <http://metamine.org/i_s_00000010/tango_black> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000010/tango_black/poissons_ratio>,
+        <http://metamine.org/i_s_00000010/tango_black/youngs_modulus> .
+
+<http://metamine.org/i_s_00000010/tango_black/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "tango_black/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000010/tango_black/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "tango_black/2.00E+06"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000010/vero_white> a <http://metamine.org/i_s_00000010/vero_white> ;
+    sio:hasAttribute <http://metamine.org/i_s_00000010/vero_white/poissons_ratio>,
+        <http://metamine.org/i_s_00000010/vero_white/youngs_modulus> .
+
+<http://metamine.org/i_s_00000010/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/i_s_00000010/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
