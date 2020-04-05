@@ -13,7 +13,7 @@
 
 <h2 id="ontology">Ontology File</h2>
 <h3>Link:<a href="https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl"> https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl</a> </h3>
-<h3>View the ontology documentation at:<a href="">add link here</a></h3>
+<! –– <h3>View the ontology documentation at:<a href="">add link here</a></h3> ––>
 
 <h3>Primary Classes and Definitions</h3>
 <ol>
@@ -33,7 +33,7 @@
 </ul>
 </li>
 
-<li><b>Geometry<b>
+<li><b>Geometry</b>
 <ul type="circle">
 <li>Definition: An information content entity that pertains to the structure and topology of a metamaterial.</li>
 <li>Immediate Superclass: http://semanticscience.org/resource/SIO_000506</li>
