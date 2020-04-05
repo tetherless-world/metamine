@@ -14,7 +14,7 @@
 <h2 id="ontology">Ontology File</h2>
 <h3>Link:<a href="https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl"> https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl</a> </h3>
 
-<iframe src="images/ontology_view.png" style="width: 800px;height: 500px;border: none;"></iframe>
+<iframe src="images/ontology_view.png" style="width: 700px;height: 350px;border: none;"></iframe>
 ><p align="justify">Snapshot of image generated using the RDF Viewer tool hosted at <a href="http://jimmccusker.github.io/rdfviewer/">http://jimmccusker.github.io/rdfviewer/</a></p>
 
 <h2 id="primary">Primary Classes and Definitions</h2>
