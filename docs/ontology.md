@@ -13,7 +13,6 @@
 
 <h2 id="ontology">Ontology File</h2>
 <h3>Link:<a href="https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl"> https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl</a> </h3>
-<!–– <h3>View the ontology documentation at:<a href="">add link here</a></h3> ––>
 
 <h3>Primary Classes and Definitions</h3>
 <ol>
