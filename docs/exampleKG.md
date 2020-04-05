@@ -23,7 +23,7 @@
 
 > <p align="justify"> The above sample data was converted to a <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.ttl">knowledge graph</a> by using a customized setlr script available <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.setl.ttl"> here</a>. The KG creation is based on the structure provided by our MO, found <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine.ttl">here</a>.</p>
 
-<iframe src="images/kg_view_instance1.png" style="width: 800px;height: 350px;border: none;"></iframe>
-><p style="text-align:right">Image generated using the RDF Viewer tool hosted at <a href="http://jimmccusker.github.io/rdfviewer/"><small>http://jimmccusker.github.io/rdfviewer/</small></a></p>
+<iframe src="images/kg_view_instance1.png" style="width: 800px;height: 500px;border: none;"></iframe>
+><p align="justify">Image generated using the RDF Viewer tool hosted at <a href="http://jimmccusker.github.io/rdfviewer/"><small>http://jimmccusker.github.io/rdfviewer/</small></a></p>
 
 [back](./)
