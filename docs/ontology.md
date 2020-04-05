@@ -3,17 +3,17 @@
 |[Home](./index.html)|[Example Knowledge Graph](./exampleKG.html)|[Applications](./applications.html)|
 
 <h2 id="overview">Overview</h2>
-> <p align="justify">This page consists of the concept map and the step-by-step process of ontology creation </p>
+> <p align="justify">This page consists of the conceptual model of the MetaMine Ontology (MO), link to teh ontology file, information about the primary classes of MO and the ontologies reused for MO.</p>
 
 |[Conceptual Model](#conceptmap)|[Ontology File](#ontology)|[Ontologies Reused](#reused)|
 
 <h2 id="conceptmap">Conceptual Model</h2>
-<iframe src="images/metamine_ontology.pdf" style="width: 750px;height: 400px;border: none;"></iframe>
+<iframe src="images/metamine_ontology.pdf" style="width: 700px;height: 350px;border: none;"></iframe>
 >An overview of the main classes and their property associations.
 
 <h2 id="ontology">Ontology File</h2>
 <h3>Link:<a href="https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl"> https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl</a> </h3>
-<! –– <h3>View the ontology documentation at:<a href="">add link here</a></h3> ––>
+<!–– <h3>View the ontology documentation at:<a href="">add link here</a></h3> ––>
 
 <h3>Primary Classes and Definitions</h3>
 <ol>
@@ -61,11 +61,11 @@
 
 <h2 id="reused">Ontologies Reused</h2>
 
-<h3>Mid-Level Ontologies</h3>
+<h3>Mid-Level Ontology</h3>
 <ul>
 <li><a href="https://raw.githubusercontent.com/micheldumontier/semanticscience/master/ontology/sio/release/sio-subset-labels.owl">SemanticScience Integrated Ontology (SIO)</a></li>
 </ul>
-<h3>Statistical Ontologies</h3>
+<h3>Statistical Ontology</h3>
 <ul>
 <li><a href="https://www.google.com/search?q=UO+ontology&rlz=1C5CHFA_enIN727IN729&oq=UO+ontology&aqs=chrome..69i57j69i60.3199j0j4&sourceid=chrome&ie=UTF-8">Units Ontology (UO)</a></li>
 </ul>
