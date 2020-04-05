@@ -3,7 +3,7 @@
 |[Home](./index.html)|[Ontology](./ontology.html)|[Applications](./applications.html)|
 
 <h2 id="overview">Overview</h2>
-> <p align="justify">This page consists of a step by step process of how to create a knowldge graph using our ontology for structural metamaterials. It also provides an example knowledge graph. The same process with some modifications could be used to create knowledge graphs for other types of metamaterials also. </p>
+> <p align="justify">This page consists of a step by step process of how to create a knowldge graph using our ontology for structural metamaterials. It also provides an example knowledge graph, its source, and its view. The same process with some modifications could be used to create knowledge graphs for other types of metamaterials also. </p>
 
 |[Workflow](#workflow)|[Example Knowledge Graph](#exampleKG)|
 
@@ -24,6 +24,6 @@
 > <p align="justify"> The above sample data was converted to a <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.ttl">knowledge graph</a> by using a customized setlr script available <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.setl.ttl"> here</a>. The KG creation is based on the structure provided by our MO, found <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine.ttl">here</a>.</p>
 
 <iframe src="images/kg_view_instance1.png" style="width: 800px;height: 500px;border: none;"></iframe>
-><p align="justify">Image generated using the RDF Viewer tool hosted at <a href="http://jimmccusker.github.io/rdfviewer/"><small>http://jimmccusker.github.io/rdfviewer/</small></a></p>
+><p align="justify">Snapshot of image generated using the RDF Viewer tool hosted at <a href="http://jimmccusker.github.io/rdfviewer/">http://jimmccusker.github.io/rdfviewer/</a></p>
 
 [back](./)
