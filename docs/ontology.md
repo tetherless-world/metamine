@@ -3,9 +3,9 @@
 |[Home](./index.html)|[Example Knowledge Graph](./exampleKG.html)|[Applications](./applications.html)|
 
 <h2 id="overview">Overview</h2>
-> <p align="justify">This page consists of the conceptual model of the MetaMine Ontology (MO), link to teh ontology file, information about the primary classes of MO and the ontologies reused for MO.</p>
+> <p align="justify">This page consists of the conceptual model of the MetaMine Ontology (MO), link to the ontology file, information about the primary classes of MO and the ontologies reused.</p>
 
-|[Conceptual Model](#conceptmap)|[Ontology File](#ontology)|[Ontologies Reused](#reused)|
+|[Conceptual Model](#conceptmap)|[Ontology File](#ontology)|[Primary Classes and Definitions](#primary)|[Ontologies Reused](#reused)|
 
 <h2 id="conceptmap">Conceptual Model</h2>
 <iframe src="images/metamine_ontology.pdf" style="width: 700px;height: 350px;border: none;"></iframe>
@@ -14,7 +14,7 @@
 <h2 id="ontology">Ontology File</h2>
 <h3>Link:<a href="https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl"> https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/metamine.ttl</a> </h3>
 
-<h3>Primary Classes and Definitions</h3>
+<h2 id="primary">Primary Classes and Definitions</h2>
 <ol>
 <li><b>Constituent Material</b>
 <ul type="circle">
@@ -68,7 +68,5 @@
 <ul>
 <li><a href="https://www.google.com/search?q=UO+ontology&rlz=1C5CHFA_enIN727IN729&oq=UO+ontology&aqs=chrome..69i57j69i60.3199j0j4&sourceid=chrome&ie=UTF-8">Units Ontology (UO)</a></li>
 </ul>
-
-
 
 [back](./)
