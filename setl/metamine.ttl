@@ -9,24 +9,18 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 :ns a owl:Ontology ;
-    rdfs:label "Metamine Ontology" ;
-    dcterms:creator <https://tw.rpi.edu/instances/Deborah_L_McGuinness>,
+    rdfs:label "MetaMine Ontology" ;
+    dcterms:creator <https://tw.rpi.edu/instances/NehaKeshan>,
         <https://tw.rpi.edu/instances/JamesMcCusker>,
-        <https://tw.rpi.edu/instances/NehaKeshan>;
-    rdfs:comment "A metamine ontology to support data publication for metamaterials." ;
+        <https://tw.rpi.edu/instances/Deborah_L_McGuinness>;        
+    rdfs:comment "A metamine ontology to support data publication metamaterials." ;
     owl:imports bibo:,
         <http://semanticscience.org/ontology/sio-subset-labels.owl>,
         <http://www.nanopub.org/nschema#> .
 
-metamine:Abbreviation a owl:Class ;
-    rdfs:label "Abbreviation" ;
-    rdfs:subClassOf sio:Name ;
-    skos:definition "a shortened form of a word or phrase. It consists of a group of letters taken from the word or phrase." ;
-    prov:wasQuotedFrom "https://en.wikipedia.org/wiki/Abbreviation" .
-
-metamine:C4v a owl:Class ;
-    rdfs:label "C4v" ;
-    rdfs:subClassOf metamine:Geometry .
+metamine:Metamaterial a owl:Class ;
+    rdfs:label "Metamaterial" ;
+    rdfs:subClassOf sio:MaterialEntity .
 
 metamine:EffectivePoissonsRatio a owl:Class ;
     rdfs:label "Effective Poissons Ratio" ;
@@ -40,28 +34,16 @@ metamine:EffectiveYoungsModulus a owl:Class ;
             owl:onProperty sio:hasUnit ],
         metamine:EffectiveMechanicalProperty .
 
-metamine:Metamaterial a owl:Class ;
-    rdfs:label "Metamaterial" ;
-    rdfs:subClassOf sio:ChemicalSubstance .
+
+metamine:MechanicalProperty a owl:Class ;
+    rdfs:label "Mechanical Property" ;
+    rdfs:subClassOf sio:Quantity .
 
 metamine:PoissonsRatio a owl:Class ;
     rdfs:label "Poissons Ratio" ;
     metamine:hasSelector "//PoissonsRatio" ;
     rdfs:subClassOf metamine:MechanicalProperty ;
     skos:definition "Negative ratio of traverse to axial strain" .
-
-metamine:ProceedingsArticle a owl:Class ;
-    rdfs:label "Conference Proceedings Article" ;
-    rdfs:subClassOf bibo:AcademicArticle ;
-    skos:definition "An article published in the proceedings of a conference." .
-
-metamine:ResearchArticle a owl:Class ;
-    rdfs:label "Research Article" ;
-    rdfs:subClassOf bibo:AcademicArticle .
-
-metamine:ReviewArticle a owl:Class ;
-    rdfs:label "Review Article" ;
-    rdfs:subClassOf bibo:AcademicArticle .
 
 metamine:YoungsModulus a owl:Class ;
     rdfs:label "Youngs Modulus" ;
@@ -81,15 +63,6 @@ metamine:shBandgap a owl:Class ;
 metamine:Bandgap a owl:Class ;
     rdfs:label "Bandgap" ;
     rdfs:subClassOf sio:Quantity .
-
-<http://metamine.org/ns/unit/1-pa> a sio:UnitOfMeasurement ;
-    rdfs:label "1/Pa" .
-
-bibo: rdfs:label "BIBO" .
-
-<http://semanticscience.org/ontology/sio-subset-labels.owl> rdfs:label "SIO" .
-
-<http://www.nanopub.org/nschema#> rdfs:label "Nanopub" .
 
 metamine:EffectiveBandgap a owl:Class ;
     rdfs:label "Effective Bandgap" ;
@@ -114,10 +87,33 @@ metamine:EffectiveMechanicalProperty a owl:Class ;
 metamine:Geometry a owl:Class ;
     rdfs:label "Geometry" .
 
-metamine:MechanicalProperty a owl:Class ;
-    rdfs:label "Mechanical Property" ;
-    rdfs:subClassOf sio:Quantity .
+metamine:C4v a owl:Class ;
+    rdfs:label "C4v" ;
+    rdfs:subClassOf metamine:Geometry .
 
 <http://metamine.org/ns/unit/pa> a sio:UnitOfMeasurement ;
     rdfs:label "Pa" .
+
+metamine:ProceedingsArticle a owl:Class ;
+    rdfs:label "Conference Proceedings Article" ;
+    rdfs:subClassOf bibo:AcademicArticle ;
+    skos:definition "An article published in the proceedings of a conference." .
+
+metamine:ResearchArticle a owl:Class ;
+    rdfs:label "Research Article" ;
+    rdfs:subClassOf bibo:AcademicArticle .
+
+metamine:ReviewArticle a owl:Class ;
+    rdfs:label "Review Article" ;
+    rdfs:subClassOf bibo:AcademicArticle .
+
+<http://metamine.org/ns/unit/1-pa> a sio:UnitOfMeasurement ;
+    rdfs:label "1/Pa" .
+
+bibo: rdfs:label "BIBO" .
+
+<http://semanticscience.org/ontology/sio-subset-labels.owl> rdfs:label "SIO" .
+
+<http://www.nanopub.org/nschema#> rdfs:label "Nanopub" .
+
 
