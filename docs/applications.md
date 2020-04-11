@@ -9,9 +9,11 @@
 
 <h2 id="sparql">Scenario Query</h2>
 
-<h3> Metamaterial match : Does a 2D structural Metamaterial with Effective Poissons Ratio "0.306472" and EffectiveYoungsModulus "1.80E+09 Pa" exists ?</h3>
+<h3> Existing Metamaterial </h3>
+> <strong>Does a 2D structural Metamaterial with Effective Poissons Ratio "0.306472" and EffectiveYoungsModulus "1.80E+09 Pa" exists ? </strong>
 
-```PREFIX sio: <http://semanticscience.org/resource/>
+<pre>
+PREFIX sio: <http://semanticscience.org/resource/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -21,16 +23,18 @@ PREFIX metamine: <http://metamine.org/>
 SELECT DISTINCT ?s WHERE{
   ?s a metamine:Metamaterial ;
        sio:hasAttribute ?pr ;
-       sio:hasAttribute ?ym.
-  ?pr a metamine:EffectivePoissonsRatio;
-        sio:hasValue "0.306472"^^<xsd:double>;
+       sio:hasAttribute ?ym .
+  ?pr a metamine:EffectivePoissonsRatio ;
+        sio:hasValue "0.306472"^^<xsd:double> ;
         sio:inRelationTo ?prmat .
-  ?ym a metamine:EffectiveYoungsModulus;
-        sio:hasValue "1.80E+09"^^<xsd:double>;
+  ?ym a metamine:EffectiveYoungsModulus ;
+        sio:hasValue "1.80E+09"^^<xsd:double> ;
         sio:inRelationTo ?ymmat .
-} ```
+} 
 
-<iframe src="images/query1output.png"></iframe>
+</pre>
+
+<iframe src="images/query1output.png" style="width: 100px;height: 50px;border: none;></iframe>
 
 <h2 id="3d">3-Dimensional Structural Metamaterials</h2>
 
