@@ -35,7 +35,7 @@
 
 > <strong> Result 1: Existing 2D Structural Metamaterial retrieved from the match query is represented </strong>
 
-<iframe src="images/query1output.png" style="width: 300px;height: 150px;border: none;"></iframe>
+<iframe src="images/query1output.png" style="width: 300px;height: 100px;border: none;"></iframe>
 
 > <strong> Query 2: Provide constituent materials used and the basic geometry details of the above structural metamaterial ? </strong>
 
@@ -65,7 +65,7 @@
 
 > <strong> Result 1: Information on the constituent materials used and basic geometry details of the existing 2D Structural Metamaterial retrieved from the match query is represented </strong>
 
-<iframe src="images/query2output.png" style="width: 300px;height: 150px;border: none;"></iframe>
+<iframe src="images/query2output.png" style="width: 500px;height: 150px;border: none;"></iframe>
 
 <h3> Other Possible Scenarios </h3>
 > <p align="justify"> Other such queries could be queried over the created knowledge graph to extract the creator of the above metamaterial, or get metamaterials within a required effective property ranges, within the required property ranges, to find different contituent materials that could provide the required effective properties, and so on. </p>
