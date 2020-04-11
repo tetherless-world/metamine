@@ -72,10 +72,12 @@
 
 > <p align="justify"> The data could be directly stored in a spreadsheet as shown in the below figure <p>
 
-<iframe src="images/query2output.png" style="width: 500px;height: 200px;border: none;"></iframe>
+<iframe src="images/3D_data.png" style="width: 500px;height: 200px;border: none;"></iframe>
 
 > <p align="justify"> Now the link to this spreadsheet could be stored in the geometry data column of the provided <a href="https://tetherless-world.github.io/metamine/exampleKG.html#exampleKG">sampleData template</a>. The same <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.ttl">knowledge graph setlr script </a> could be run on this data set as the template is exactly the same. Only the value in the geometry_data column is replaced from string consisting of numbers to a link consisting of those numbers. </p>
->
+
+<iframe src="images/3D_data_rep.png" style="width: 500px;height: 200px;border: none;"></iframe>
+
 ><b>The same process could be followed for other 3D metamaterial dataset.</b>
 
 [back](./)
