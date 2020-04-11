@@ -31,10 +31,9 @@ SELECT DISTINCT ?s WHERE{
         sio:hasValue "1.80E+09"^^<xsd:double> ;
         sio:inRelationTo ?ymmat .
 } 
-
 </pre>
 
-<iframe src="images/query1output.png" style="width: 100px;height: 50px;border: none;></iframe>
+<iframe src="images/query1output.png" style="width: 100px;height: 50px;border: none;"></iframe>
 
 <h2 id="3d">3-Dimensional Structural Metamaterials</h2>
 
