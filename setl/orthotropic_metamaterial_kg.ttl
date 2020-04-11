@@ -1,0 +1,78 @@
+@prefix metamine: <http://metamine.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+
+metamine:orthotropic_s_00000001 a metamine:Metamaterial ;
+    sio:hasAttribute <http://metamine.org/orthotropic_s_00000001/effective_poissons_ratio_12>,
+        <http://metamine.org/orthotropic_s_00000001/effective_poissons_ratio_21> ,
+        <http://metamine.org/orthotropic_s_00000001/effective_youngs_modulus_11> ,
+        <http://metamine.org/orthotropic_s_00000001/effective_poissons_ratio_22> ,
+        <http://metamine.org/orthotropic_s_00000001/effective_shear_modulus> ;
+    sio:hasPart <http://metamine.org/orthotropic_s_00000001/void>,
+        <http://metamine.org/orthotropic_s_00000001/vero_white> ;
+    sio:isDescribedBy <http://metamine.org/orthotropic_s_00000001/Orthotropic Symmetry> .
+
+<http://metamine.org/nanopub/orthotropic_s_00000001> a <nanopub:Nanopublication> ;
+    <nanopub:hasAssertion> metamine:orthotropic_s_00000001_assertion ;
+    <nanopub:hasProvenance> metamine:orthotropic_s_00000001_provenance .
+
+<http://metamine.org/orthotropic_s_00000001/Orthotropic Symmetry> a metamine:Orthotropic Symmetry ;
+    rdfs:label "orthotropic_s_00000001/geometry type 2d Orthotropic Symmetry octant bit layout msb" ;
+    sio:hasValue "https://docs.google.com/spreadsheets/d/1GWPFsS2t4YRmVlWezD06-cqYdco4DAIErZCu7DkjUQo/edit?usp=sharing"^^metamine:embedded .
+
+<http://metamine.org/orthotropic_s_00000001/Liwei> a prov:Organization .
+
+<http://metamine.org/orthotropic_s_00000001/effective_poissons_ratio_12> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "0.63609"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/orthotropic_s_00000001/void/poissons_ratio>,
+        <http://metamine.org/orthotropic_s_00000001/vero_white/poissons_ratio> .
+
+<http://metamine.org/orthotropic_s_00000001/effective_poissons_ratio_21> a metamine:EffectivePoissonsRatio ;
+    sio:hasValue "1.1773"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/orthotropic_s_00000001/void/poissons_ratio>,
+        <http://metamine.org/orthotropic_s_00000001/vero_white/poissons_ratio> .
+
+<http://metamine.org/orthotropic_s_00000001/effective_youngs_modulus_11> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "52332000"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/orthotropic_s_00000001/void/youngs_modulus>,
+        <http://metamine.org/orthotropic_s_00000001/vero_white/youngs_modulus> .
+
+<http://metamine.org/orthotropic_s_00000001/effective_youngs_modulus_22> a metamine:EffectiveYoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "28276000"^^<xsd:double> ;
+    sio:inRelationTo <http://metamine.org/orthotropic_s_00000001/void/youngs_modulus>,
+        <http://metamine.org/orthotropic_s_00000001/vero_white/youngs_modulus> .
+
+<http://metamine.org/orthotropic_s_00000001/effective_shear_modulus> a metamine:EffectiveEffectiveModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "17232042.2899486"^^<xsd:double> ;
+
+metamine:orthotropic_s_00000001_assertion a <nanopub:Assertion> ;
+    <dcterms:creator> <http://metamine.org/orthotropic_s_00000001/Liwei> .
+
+metamine:orthotropic_s_00000001_provenance a <nanopub:Provenance> .
+
+<http://metamine.org/orthotropic_s_00000001/void> a <http://metamine.org/orthotropic_s_00000001/void> ;
+    sio:hasAttribute <http://metamine.org/orthotropic_s_00000001/void/poissons_ratio>,
+        <http://metamine.org/orthotropic_s_00000001/void/youngs_modulus> .
+
+<http://metamine.org/orthotropic_s_00000001/void/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "void/0.33"^^<xsd:double> .
+
+<http://metamine.org/orthotropic_s_00000001/void/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "void/0"^^<xsd:double> .
+
+<http://metamine.org/orthotropic_s_00000001/vero_white> a <http://metamine.org/orthotropic_s_00000001/vero_white> ;
+    sio:hasAttribute <http://metamine.org/orthotropic_s_00000001/vero_white/poissons_ratio>,
+        <http://metamine.org/orthotropic_s_00000001/vero_white/youngs_modulus> .
+
+<http://metamine.org/orthotropic_s_00000001/vero_white/poissons_ratio> a metamine:PoissonsRatio ;
+    sio:hasValue "vero_white/0.33"^^<xsd:double> .
+
+<http://metamine.org/orthotropic_s_00000001/vero_white/youngs_modulus> a metamine:YoungsModulus ;
+    sio:hasUnit "uo:Pa" ;
+    sio:hasValue "vero_white/2.00E+09"^^<xsd:double> .
+

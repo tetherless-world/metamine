@@ -5,9 +5,9 @@
 <h2 id="overview">Overview</h2>
 > <p align="justify">This page demonstrates how and where our Metamine Ontology (MO) could be used. First we look at some SPARQL queries to query the <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example knowledge graph</a> and how those results will help. We then look at ways how 3-D large data files could be directly incorporated using the current framework by modifying the spreadsheet storing the data for knowledge graph. We then move forward to show how the ontology could be used for other types of metamaterials and outside the metamaterial domain. We conclude by exhibiting our vision of how our ontolgoy and its method could help create a knowledge graph of all the ontologies and knowledge graphs in the material science domain. </p>
 
-|[Query](#sparql)|[3-Dimensional Structural Metamaterials](#3d)|[Other Types of Metamaterials](#otherMeta)|[Vision](#vision)|
+|[Query](#sparql)|[Extension of Current Ontology](#extension)|[Other Types of Metamaterials](#otherMeta)|[Vision](#vision)|
 
-<h2 id="sparql">Query</h2>
+<h2 id="sparql"><u>Query</u></h2>
 
 <h3>Scenario 1: Existing Metamaterial </h3>
 > <strong> Query 1: Does a 2D structural Metamaterial with Effective Poissons Ratio "0.288084" and EffectiveYoungsModulus "1.55E+09 Pa" exists ? </strong>
@@ -63,20 +63,27 @@
 
 <iframe src="images/query2output.png" style="width: 500px;height: 150px;border: none;"></iframe>
 
+
 <h3> Other Possible Scenarios </h3>
 > <p align="justify"> Other such queries could be queried over the created knowledge graph to extract the creator of the above metamaterial, or get metamaterials within a required effective property ranges, within the required property ranges, to find different contituent materials that could provide the required effective properties, use of labels for querying, and so on. </p>
 >
 > <p align="justify"> As different types 2D Structural Metamaterial is added to the knowledge graph, it will help the community to have access to the existing metamaterials and their provenance on their finger tips. this would also help the material scientists to save the energy and time that would have been used up only to know that the work they did was a duplicating of an existing work.</p>
 
-<h2 id="3d">3-Dimensional Orthotropic Structural Metamaterials</h2>
+
+<h2 id="extension"><u>Extension of Current Ontology</u></h2>
+
+<h3> Orthotropic Metamaterials </h3>
 
 > <p align="justify"> The data could be directly stored in a spreadsheet as shown in the below figure <p>
 
 <iframe src="images/3D_data.png" style="width: 500px;height: 200px;border: none;"></iframe>
 
-> <p align="justify"> Now the link to this spreadsheet could be stored in the geometry data column of the provided <a href="https://tetherless-world.github.io/metamine/exampleKG.html#exampleKG">sampleData template</a>. The same <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.ttl">knowledge graph setlr script </a> could be run on this data set as the template is exactly the same. Only the value in the geometry_data column is replaced from string consisting of numbers to a link consisting of those numbers. </p>
+
+> <p align="justify"> The "Shear Modulus" needs to be added to the ontology under Properties and "Effective Shear Modulus" under Effective properties. The relations of these would be the same as those of "Youngs Modulus and Effective Youngs Modulus".</p>
+> <p align=justify"> For creating the knowledge graph, we would add the above spreadsheet link in the geometry data column of the provided <a href="https://tetherless-world.github.io/metamine/exampleKG.html#exampleKG">sampleData template and add another column of effective shear mudulus</a>. The same <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.ttl">knowledge graph setlr script</a> with a modification to incorporate 2 poissons ratio, two youngs modulus and one shear modulus could be run on this data set.</p>
 
 <iframe src="images/3D_data_rep.png" style="width: 500px;height: 200px;border: none;"></iframe>
+> <p align="justify">The resulted orthotropic metamaterial knowledge graph could be found <a href="https://github.com/tetherless-world/metamine/blob/master/setl/orthotropic_metamaterial_kg.ttl>here</a>. </p>
 
 ><b>The same process could be followed for other 3D metamaterial dataset.</b>
 
