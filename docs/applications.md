@@ -5,7 +5,7 @@
 <h2 id="overview">Overview</h2>
 > <p align="justify">This page demonstrates how and where our Metamine Ontology (MO) could be used. First we look at some SPARQL queries to query the <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example knowledge graph</a> and how those results will help. We then look at ways how 3-D large data files could be directly incorporated using the current framework by modifying the spreadsheet storing the data for knowledge graph. We then move forward to show how the ontology could be used for other types of metamaterials and outside the metamaterial domain. We conclude by exhibiting our vision of how our ontolgoy and its method could help create a knowledge graph of all the ontologies and knowledge graphs in the material science domain. </p>
 
-|[Query](#sparql)|[Extension of Current Ontology](#extension)|[Other Types of Metamaterials](#otherMeta)|[Vision](#vision)|
+|[Query](#sparql)|[MO extension and use by KG code modification to incorporate different metamaterials](#otherMeta)|[Vision](#vision)|
 
 <h2 id="sparql"><u>Query</u></h2>
 
@@ -74,7 +74,7 @@
 > <p align="justify"> As different types 2D Structural Metamaterial is added to the knowledge graph, it will help the community to have access to the existing metamaterials and their provenance on their finger tips. this would also help the material scientists to save the energy and time that would have been used up only to know that the work they did was a duplicating of an existing work.</p>
 
 
-<h2 id="extension"><u>Extension of Current Ontology</u></h2>
+<h2 id="otherMeta"><u>MO extension and use by KG code modification to incorporate different metamaterials</u></h2>
 
 <h3> Orthotropic Metamaterials </h3>
 
@@ -92,6 +92,15 @@
 
 <iframe src="images/orthotropic_kg_snapshot.png" style="width: 500px;height: 200px;border: none;"></iframe>
 
-><b>The same process could be followed for other 3D metamaterial dataset.</b>
+><b>The same process could be followed for other 3D structural metamaterial dataset.</b>
+
+<h3> Other types of Metamaterials </h3>
+
+<p align="justify"> To apply the created MO to other types of metamaterials, we would be required to do one of the following two things:
+<ol>
+<li>Keep the ontology intact and made changes to the data storage method so that it looks exactly as the provided template</li>
+<li>Extend Mo by adding more properties and effective properties as required and then extend the KG code accordingly</li>
+</ol>
+This could be demonstrated by looking at <b>Acoustic Metamaterials</b>, <b>Knitting</b>, and <b>Origami</b></p>
 
 [back](./)
