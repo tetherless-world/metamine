@@ -31,8 +31,12 @@
             sio:hasValue "1.55E+09"^^<xsd:double> ;
             sio:inRelationTo ?ymmat .
     }   
+
+
 > <strong> Result 1: Existing 2D Structural Metamaterial retrieved from the match query is represented </strong>
+
 <iframe src="images/query1output.png" style="width: 300px;height: 100px;border: none;"></iframe>
+
 > <strong> Query 2: Provide constituent materials used and the basic geometry details of the above structural metamaterial ? </strong>
 
     PREFIX sio: <http://semanticscience.org/resource/>
@@ -83,7 +87,10 @@
 > <p align=justify"> For creating the knowledge graph, we would add the above spreadsheet link in the geometry data column of the provided <a href="https://tetherless-world.github.io/metamine/exampleKG.html#exampleKG">sampleData template and add another column of effective shear mudulus</a>. The same <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.ttl">knowledge graph setlr script</a> with a modification to incorporate 2 poissons ratio, two youngs modulus and one shear modulus could be run on this data set.</p>
 
 <iframe src="images/3D_data_rep.png" style="width: 500px;height: 200px;border: none;"></iframe>
-> <p align="justify">The resulted orthotropic metamaterial knowledge graph could be found <a href="https://github.com/tetherless-world/metamine/blob/master/setl/orthotropic_metamaterial_kg.ttl>here</a>. </p>
+
+> <p align="justify">The resulted orthotropic metamaterial knowledge graph could be found <a href="https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/orthotropic_metamaterial_kg.ttl">here</a>. </p>
+
+<iframe src="images/orthotropic_kg_snapshot.png" style="width: 500px;height: 200px;border: none;"></iframe>
 
 ><b>The same process could be followed for other 3D metamaterial dataset.</b>
 
