@@ -66,7 +66,7 @@
 > <strong> Result 1: Information on the constituent materials used and basic geometry details of the existing 2D Structural Metamaterial retrieved from the match query is represented </strong>
 
 <iframe src="images/query2output.png" style="width: 500px;height: 150px;border: none;"></iframe>
-
+<br>
 
 <h3> Other Possible Scenarios </h3>
 > <p align="justify"> Other such queries could be queried over the created knowledge graph to extract the creator of the above metamaterial, or get metamaterials within a required effective property ranges, within the required property ranges, to find different contituent materials that could provide the required effective properties, use of labels for querying, and so on. </p>
@@ -84,11 +84,11 @@
 
 
 > <p align="justify"> The "Shear Modulus" needs to be added to the ontology under Properties and "Effective Shear Modulus" under Effective properties. The relations of these would be the same as those of "Youngs Modulus and Effective Youngs Modulus".</p>
-> <p align=justify"> For creating the knowledge graph, we would add the above spreadsheet link in the geometry data column of the provided <a href="https://tetherless-world.github.io/metamine/exampleKG.html#exampleKG">sampleData template and add another column of effective shear mudulus</a>. The same <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.ttl">knowledge graph setlr script</a> with a modification to incorporate 2 poissons ratio, two youngs modulus and one shear modulus could be run on this data set.</p>
+> <p align="justify"> For creating the knowledge graph, we would add the above spreadsheet link in the geometry data column of the provided <a href="https://tetherless-world.github.io/metamine/exampleKG.html#exampleKG">sampleData template and add another column of effective shear mudulus</a>. The same <a href="https://github.com/tetherless-world/metamine/blob/master/setl/metamine_kg.ttl">knowledge graph setlr script</a> with a modification to incorporate 2 poissons ratio, two youngs modulus and one shear modulus could be run on this data set.</p>
 
 <iframe src="images/3D_data_rep.png" style="width: 500px;height: 200px;border: none;"></iframe>
 
-> <p align="justify">The resulted orthotropic metamaterial knowledge graph could be found <a href="https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/orthotropic_metamaterial_kg.ttl">here</a>. </p>
+> <p align="justify">The resulted orthotropic metamaterial knowledge graph could be found <a href="https://raw.githubusercontent.com/tetherless-world/metamine/master/setl/orthotropic_metamaterial_kg.ttl">here</a>. The image below provides a snippet of the generated orthotropic metamaterial knowledge graph of the above example data. </p>
 
 <iframe src="images/orthotropic_kg_snapshot.png" style="width: 500px;height: 200px;border: none;"></iframe>
 
