@@ -67,7 +67,10 @@
 
 <iframe src="images/query2output.png" style="width: 300px;height: 150px;border: none;"></iframe>
 
-> <p align="justify"> Other such queries could be queried over the created knowledge graph to extract teh creator of teh above metamaterial, or get metamaterials within a required effective property ranges, within the required property ranges, to find different contituent materials that could provide the required effective properties, and so on </p>
+<h3> Other Possible Scenarios </h3>
+> <p align="justify"> Other such queries could be queried over the created knowledge graph to extract the creator of the above metamaterial, or get metamaterials within a required effective property ranges, within the required property ranges, to find different contituent materials that could provide the required effective properties, and so on. </p>
+>
+> <p align="justify"> As du=ifferent types 2D Structural Metamaterial is added to the knowledge graph, it will help the community to have access to the existing metamaterials and their provenance on their finger tips. this would also help the material scientists to save the energy and time that would have been used up only to know that the work they did was a duplicating of an existing work.  
 
 <h2 id="3d">3-Dimensional Structural Metamaterials</h2>
 
