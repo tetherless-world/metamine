@@ -12,26 +12,26 @@
 <h3>Scenario 1: Existing Metamaterial </h3>
 > <strong> Query 1: Does a 2D structural Metamaterial with Effective Poissons Ratio "0.306472" and EffectiveYoungsModulus "1.80E+09 Pa" exists ? </strong>
 
-<pre>
-    PREFIX sio: <http://semanticscience.org/resource/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX owl: <http://www.w3.org/2002/07/owl#>
-    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-    PREFIX metamine: <http://metamine.org/>
+    <pre>
+        PREFIX sio: <http://semanticscience.org/resource/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+        PREFIX metamine: <http://metamine.org/>
 
-    SELECT DISTINCT ?s WHERE{
-        ?s a metamine:Metamaterial ;
-           sio:hasAttribute ?pr ;
-           sio:hasAttribute ?ym .
-        ?pr a metamine:EffectivePoissonsRatio ;
-            sio:hasValue "0.306472"^^<xsd:double> ;
-            sio:inRelationTo ?prmat .
-        ?ym a metamine:EffectiveYoungsModulus ;
-            sio:hasValue "1.80E+09"^^<xsd:double> ;
-            sio:inRelationTo ?ymmat .
-    } 
-</pre>
+        SELECT DISTINCT ?s WHERE{
+            ?s a metamine:Metamaterial ;
+            sio:hasAttribute ?pr ;
+            sio:hasAttribute ?ym .
+            ?pr a metamine:EffectivePoissonsRatio ;
+                sio:hasValue "0.306472"^^<xsd:double> ;
+                sio:inRelationTo ?prmat .
+            ?ym a metamine:EffectiveYoungsModulus ;
+                sio:hasValue "1.80E+09"^^<xsd:double> ;
+                sio:inRelationTo ?ymmat .
+        } 
+    </pre>
 
 > <strong> Result 1: Existing 2D Structural Metamaterial retrieved from the match query is represented </strong>
 > <iframe src="images/query1output.png" style="width: 300px;height: 150px;border: none;"></iframe>
