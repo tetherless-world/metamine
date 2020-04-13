@@ -140,7 +140,7 @@ This could be demonstrated by looking at <b>Acoustic Metamaterials</b>, <b>Knitt
 > </ul>
 > </li>
 > </ol>
-<iframe src="images/materialsmine_ontology" style="width: 500px;height: 150px;border: none;"></iframe>
+<iframe src="images/materialsmine_ontology.pdf" style="width: 700px;height: 350px;border: none;"></iframe>
 
 
 
