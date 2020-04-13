@@ -106,9 +106,9 @@ This could be demonstrated by looking at <b>Acoustic Metamaterials</b>, <b>Knitt
 <h4> Acoustic Metamaterial</h4>
 > <p align="justify">As all other metamaterials, acoustic metamaterial also consists of constituent materials, its shape is described by a geometry and possesses some effective properties which are in relation to the constituent material properties. In addition, acoustic metamaterials has a thin film weight at the center, adding radius and film weight to the structure. The effective properties attained by these metamaterials are generally resonant bandgaps. The data could be stored in a spreadsheet as shown in the image below with addition of bandgaps columns.</p>
 
-<iframe src="images/acoustic_data.png" style="width: 500px;height: 200px;border: none;"></iframe>
+<iframe src="images/acoustic_data.png" style="width: 500px;height: 150px;border: none;"></iframe>
 
-> <p align="center">Our current ontology does consist of bandgap class, so an extension of the bandgap class could be done to add resonant bandgaps to it. Moreover, as film is created using a constituent material, hence that becomes a part of the constituent material with its attributes.However, the radius should be added as an extension to the geometry class of MO.</p>
+> <p align="justify">Our current ontology does consist of bandgap class, so an extension of the bandgap class could be done to add resonant bandgaps to it. Moreover, as film is created using a constituent material, hence that becomes a part of the constituent material with its attributes.However, the radius should be added as an extension to the geometry class of MO.</p>
 
 
 [back](./)
