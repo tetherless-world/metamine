@@ -123,6 +123,25 @@ This could be demonstrated by looking at <b>Acoustic Metamaterials</b>, <b>Knitt
 
 <h4>Origami</h4>
 
-><p align="justify"> Please find details of origami as a metamaterial at <a href="https://par.nsf.gov/servlets/purl/10058688">this</a> article in Nature Physics. Origami could be looked as a structural metamaterial. Let's look at teh "MiuRa Fold" which is the zig zag based origami. The difference between these structural metamaterials than to teh once shown in the example knowledge graph section is that, on pulling the material outward we can see the edges go outward to instead of going in inward direction. This causes the material to possess a negative poisson's ratio which is generally not possessed by materials in nature. A knogledge graph of such materials could directly be craeted using the process defined in the <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example KG page</a>. If the material used is a paper then constituent material 1 becomes paper and constituent material becomes void or air, while the effective poissons ratio would now consist of a negative value instead of a positive one.</p>
+><p align="justify"> Please find details of origami as a metamaterial at <a href="https://par.nsf.gov/servlets/purl/10058688">this</a> article in Nature Physics. Origami could be looked as a structural metamaterial. Let's look at teh "MiuRa Fold" which is the zig zag based origami. The difference between these structural metamaterials than to teh once shown in the example knowledge graph section is that, on pulling the material outward we can see the edges go outward to instead of going in inward direction. This causes the material to possess a negative poisson's ratio which is generally not possessed by materials in nature. A knowledge graph of such materials could directly be craeted using the process defined in the <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example KG page</a>. If the material used is a paper then constituent material 1 becomes paper and constituent material becomes void or air, while the effective poissons ratio would now consist of a negative value instead of a positive one.</p>
+
+<h2 id="vision"><u>Vision</u></h2>
+
+> <ol>
+> <li>With metamaterials being comparatively a new research domain, hence one can find n-definitions of a metamaterial. It is difficult even for a material scientist to define a metamaterial in a concrete manner and in general many define it as "a material engineered to have a property that is not found in naturally occurring materials". This generalized definitions sometimes put researchers in a confused state. For example, <b>"phonomic crystals"</b> share a lot of attributes of that of <b>"photonic crystals"</b> which is a kind of optical metamaterial. But researchers are still debating whther they should be called as metamaterials or not.
+> <ul>
+> <li> It is our vision to help metamaterial researchers understand the true definition of metamaterials with teh use of semantics. This could be easily done by getting all the available definitions available over the web in different pages and research work, and finding the hidden semantics meaning.</li>
+> </li> This will also help the researchers to difefrentiate between two types of materials, find the ways they are common and different from one another.</li>
+> </ul>
+> </li>
+> <li>Our ontology the MO is difefrent from other present material science ontolgoies as it is based fully on the material science interrelationship aspect presented by the <b>tetrahedron</b>. Hence, it focuses on the description of the material (metamaterial in this case), its representation (through geometry) and, its properties and the resultant properties (effective properties). this helps us incorporate most of teh unique challenges possessed by the metmaterial research. This also helps us to look at ways how all the material science ontologies and knowledge graphs could be combined together to have a connected platform for advanced research. To see if this is possible, we create MaterialsMine Ontology (MMO) by combining Nanomine Ontology and Metamine Ontology. The conceptual model of MMO could be seen in the figure below.
+> <ul>
+> <li>This provides us with a vision of having a material sciece domain repository similar to BioPortal - a repository of biomedical ontolgoies.</li>
+> </ul>
+> </li>
+> </ol>
+<iframe src="images/materialsmine_ontology" style="width: 500px;height: 150px;border: none;"></iframe>
+
+
 
 [back](./)
