@@ -116,8 +116,9 @@ This could be demonstrated by looking at <b>Acoustic Metamaterials</b>, <b>Knitt
 
 <iframe src="images/knitting_data.png" style="width: 500px;height: 150px;border: none;"></iframe>
 
-><p align="justify"> As we can see in the data above, the template is exactly the same as our provided <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example data</a>, with the addition of flexural modulus and teh constituent material attributes. They could be easily incorporated in the knowledge graph by extending the property and effective property classes of our MO in addition to the modifications in data storage for KG creation as discussed in our <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example KG page</a>. 
+
+><p align="justify"> As we can see in the data above, the template is exactly the same as our provided <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example data</a>, with the addition of flexural modulus and teh constituent material attributes. They could be easily incorporated in the knowledge graph by extending the property and effective property classes of our MO in addition to the modifications in data storage for KG creation as discussed in our <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example KG page</a>. </p>
 >
->P.S: the data curated from the paper for this example is solely for demonstration purpose only.
+><p align="justify">P.S: the data curated from the paper for this example is solely for demonstration purpose only.</p>
 
 [back](./)
