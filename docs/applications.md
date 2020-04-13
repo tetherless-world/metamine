@@ -108,7 +108,16 @@ This could be demonstrated by looking at <b>Acoustic Metamaterials</b>, <b>Knitt
 
 <iframe src="images/acoustic_data.png" style="width: 500px;height: 150px;border: none;"></iframe>
 
+
 > <p align="justify">Our current ontology does consist of bandgap class, so an extension of the bandgap class could be done to add resonant bandgaps to it. Moreover, as film is created using a constituent material, hence that becomes a part of the constituent material with its attributes.However, the radius should be added as an extension to the geometry class of MO.</p>
 
+<h4>Knitting</h4>
+> <p align="justify"> According to the authors of <a href="https://journals.aps.org/prx/pdf/10.1103/PhysRevX.8.021075"> "Geometry and Elasticity of a knitted fabric" </a>, "knitting is not only a mere art and craft hobby but also a thousand-year-old technology", enabling "the engineering of arbitrarily shaped two- and three dimensional objects with tunable mechanical response". Their study claims to provide a fundamental framework that pave the way to thread-based smart materials by understanding knitted fabrics and its properties. A nylon thread is used to manufacture a 51x51 stockinette patterened stitched fabric using a machanical knitting machine (Toyota KS858 singlebed knitting machine). Length of upper and lower rows are fixed to 227mm. Statistics for inhomogeneous deformation were nylon-based monofilament (Stroft® GTM) of diameter d=80 μm and length of approximately 25 m, young's modulus= 5.1 GPa, yeilded bending modulus B ≈ 10^−8 J.m. Fig 3 in teh paper states that the geometry is similar to orthogonal. Since the data is a 3-D one so we would store the actual data in a different file and add the file link to our datasheet representing the metamaterial. The manually extracted data from the paper could be organized in a spreadsheet as shown in the figure below</p>
+
+<iframe src="images/knitting_data.png" style="width: 500px;height: 150px;border: none;"></iframe>
+
+><p align="justify"> As we can see in the data above, the template is exactly the same as our provided <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example data</a>, with the addition of flexural modulus and teh constituent material attributes. They could be easily incorporated in the knowledge graph by extending the property and effective property classes of our MO in addition to the modifications in data storage for KG creation as discussed in our <a href="https://tetherless-world.github.io/metamine/exampleKG.html">example KG page</a>. 
+>
+>P.S: the data curated from the paper for this example is solely for demonstration purpose only.
 
 [back](./)
