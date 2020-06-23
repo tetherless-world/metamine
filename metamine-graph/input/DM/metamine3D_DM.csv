@@ -1,0 +1,11 @@
+Column,Label,Comment,Definition,Attribute,attributeOf,Unit,Format,Time,Entity,Role,Relation,inRelationTo,wasDerivedFrom,wasGeneratedBy,Template
+w,w,,,,,,,,,,,,,,
+Unit cell x-dimension (# of pixels),Unit cell x-dimension (# of pixels),,,sio:DimensionalQuantity,??metamaterial,nanomine:Pixel,,,,,,,,,
+Unit cell y-dimension (# of pixels),Unit cell y-dimension (# of pixels),,,sio:DimensionalQuantity,??metamaterial,nanomine:Pixel,,,,,,,,,
+Unit cell z-dimension (# of pixels),Unit cell y-dimension (# of pixels),,,sio:DimensionalQuantity,??metamaterial,nanomine:Pixel,,,,,,,,,
+Condition,Plane Stress/Plane Strain,,,sio:Condition,??metamaterial,,,,,,,,,,
+CM0,Constituent Material CM0,,,,,,,,sio:MaterialEntity,,sio:isComponentPartOf,??metamaterial,,,
+CM1,Constituent Material CM1,,,,,,,,sio:MaterialEntity,,sio:isComponentPartOf,??metamaterial,,,
+CM2,Constituent Material CM2,,,,,,,,sio:MaterialEntity,,sio:isComponentPartOf,??metamaterial,,,
+Link,Resource URL,,,,,,,,sio:URL,,,??metamaterial,,,
+??metamaterial,,,,,,,,,metamine:Metamaterial,,,,,,
