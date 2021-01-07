@@ -1,5 +1,5 @@
 Column,Label,Comment,Definition,Attribute,attributeOf,Unit,Format,Time,Entity,Role,Relation,inRelationTo,wasDerivedFrom,wasGeneratedBy,Template
-w,w,,,,,,,,,,,,,,
+Symmetry,Symmetry,,,,,,,,,,,,,,
 Unit cell x-dimension (# of pixels),Unit cell x-dimension (# of pixels),,,,,,,,,,,,,,
 Unit cell y-dimension (# of pixels),Unit cell y-dimension (# of pixels),,,,,,,,,,,,,,
 Geometry encoding (Condensed 15),Geometry encoding (Condensed 15),,,,,,,,metamine:Geometry,,sio:describes,??metamaterial,,,
